@@ -1,0 +1,20 @@
+PODS:
+  - ExponentialBackOff (0.1.0)
+  - Nimble (3.0.0)
+  - Quick (0.8.0)
+
+DEPENDENCIES:
+  - ExponentialBackOff (from `../`)
+  - Nimble (= 3.0.0)
+  - Quick (~> 0.8.0)
+
+EXTERNAL SOURCES:
+  ExponentialBackOff:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ExponentialBackOff: 062c1306a8a949e67a180edf48c3a86c73c61ba6
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+
+COCOAPODS: 0.39.0

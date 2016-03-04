@@ -1,0 +1,6 @@
+framework module ExponentialBackOff {
+  umbrella header "ExponentialBackOff-umbrella.h"
+
+  export *
+  module * { export * }
+}

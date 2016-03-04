@@ -1,0 +1,6 @@
+framework module Pods_ExponentialBackOff_Tests {
+  umbrella header "Pods-ExponentialBackOff_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

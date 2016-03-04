@@ -1,0 +1,6 @@
+framework module Pods_ExponentialBackOff_Example {
+  umbrella header "Pods-ExponentialBackOff_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
