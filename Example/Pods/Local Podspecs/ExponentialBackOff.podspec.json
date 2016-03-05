@@ -1,25 +1,30 @@
 {
   "name": "ExponentialBackOff",
   "version": "0.1.0",
-  "summary": "A short description of ExponentialBackOff.",
+  "summary": "A framework which implements the ExponentialBackOff algorithm which is usefull for Networking. Also, this algorithm was mentioned by Google to be used to request an GCM token.",
   "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/ExponentialBackOff",
+  "homepage": "https://github.com/Ybrin/ExponentialBackOff",
   "license": "MIT",
   "authors": {
     "Ybrin": "koray@koska.at"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/ExponentialBackOff.git",
+    "git": "https://github.com/Ybrin/ExponentialBackOff.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "ExponentialBackOff/ExponentialBackOff/**/*",
   "resource_bundles": {
     "ExponentialBackOff": [
       "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "AsyncSwift": [
+      "~> 1.7"
     ]
   }
 }

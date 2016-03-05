@@ -1,5 +1,7 @@
 PODS:
-  - ExponentialBackOff (0.1.0)
+  - AsyncSwift (1.7.2)
+  - ExponentialBackOff (0.1.0):
+    - AsyncSwift (~> 1.7)
   - Nimble (3.0.0)
   - Quick (0.8.0)
 
@@ -13,7 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ExponentialBackOff: 062c1306a8a949e67a180edf48c3a86c73c61ba6
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  ExponentialBackOff: af34e951fe6692367c5a61af36a3bbb22be7d59b
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 

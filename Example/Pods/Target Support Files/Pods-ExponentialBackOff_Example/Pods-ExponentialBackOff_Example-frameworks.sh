@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-ExponentialBackOff_Example/Async.framework"
   install_framework "Pods-ExponentialBackOff_Example/ExponentialBackOff.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-ExponentialBackOff_Example/Async.framework"
   install_framework "Pods-ExponentialBackOff_Example/ExponentialBackOff.framework"
 fi

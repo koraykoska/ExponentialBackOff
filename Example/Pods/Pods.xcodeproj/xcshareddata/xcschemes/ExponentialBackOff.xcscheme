@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0945C2F46D2B3E26D7153CAD'
+               BlueprintIdentifier = '814D224BDF74D86A7CE18213'
                BlueprintName = 'ExponentialBackOff'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ExponentialBackOff.framework'>

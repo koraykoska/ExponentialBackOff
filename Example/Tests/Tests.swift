@@ -3,48 +3,94 @@
 import Quick
 import Nimble
 import ExponentialBackOff
+import Async
 
 class TableOfContentsSpec: QuickSpec {
-    override func spec() {
-        describe("these will fail") {
 
-            it("can do maths") {
-                expect(1) == 2
-            }
+	class TestBackOff: BackOff {
 
-            it("can read") {
-                expect("number") == "string"
-            }
+		func run(lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) {
+			Async.background {
+				var number: Int = 0
+				for i in 1 ... 10000 {
+					number = number + i
+				}
+				Async.main {
+					print(number)
+					print("lastIntervallMillis: \(lastIntervallMilis)")
+					print("elapsedTimeMillis: \(elapsedTimeMillis)")
+					if number != 100 {
+						codeToRunAfterFinishedExecuting(success: false)
+					} else {
+						codeToRunAfterFinishedExecuting(success: true)
+					}
+				}
+			}
+		}
+	}
 
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
-            
-            context("these will pass") {
+	var exponentialBackOff: ExponentialBackOffInstance!
 
-                it("can do maths") {
-                    expect(23) == 23
-                }
+	override func spec() {
+		/*
+		 describe("these will fail") {
 
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
+		 it("can do maths") {
+		 expect(1) == 2
+		 }
 
-                it("will eventually pass") {
-                    var time = "passing"
+		 it("can read") {
+		 expect("number") == "string"
+		 }
 
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
+		 it("will eventually fail") {
+		 expect("time").toEventually(equal("done"))
+		 }
 
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
+		 context("these will pass") {
 
-                        done()
-                    }
-                }
-            }
-        }
-    }
+		 it("can do maths") {
+		 expect(23) == 23
+		 }
+
+		 it("can read") {
+		 expect("🐮") == "🐮"
+		 }
+
+		 it("will eventually pass") {
+		 var time = "passing"
+
+		 dispatch_async(dispatch_get_main_queue()) {
+		 time = "done"
+		 }
+
+		 waitUntil { done in
+		 NSThread.sleepForTimeInterval(0.5)
+		 expect(time) == "done"
+
+		 done()
+		 }
+		 }
+		 }
+		 }*/
+
+		// Test ExponentialBackOff algorithm
+
+		beforeEach {
+			let builder = ExponentialBackOffInstance.Builder()
+			builder.maxElapsedTimeMillis = 10000
+			self.exponentialBackOff = ExponentialBackOffInstance(builder: builder)
+		}
+
+		describe("Testing the exponential backoff algorithm") {
+
+			it("Should back off the code exponentially") {
+				self.exponentialBackOff.algorithm(TestBackOff())
+
+				expect(self.exponentialBackOff.currentState) == BackOffState.Running
+
+				// expect(self.exponentialBackOff.currentState).toEventually(BackOffState.Failed)
+			}
+		}
+	}
 }

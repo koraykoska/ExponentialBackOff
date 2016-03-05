@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Async
 
 public class ExponentialBackOffInstance: BackOffAlgorithm {
 
@@ -42,7 +43,12 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 	 */
 	public private(set) var attempts: Int = 0
 
+	// MARK: - Algorithm specific private Properties
 	private var savedBackOff: BackOff?
+
+	private var lastIntervallMilis: Double!
+
+	private var elapsedTimeMillis: Double = 0
 
 	// MARK: - Initializers
 	public init(initialIntervalMillis: Int, maxElapsedTimeMillis: Int, maxIntervalMillis: Int, multiplier: Double, randomizationFactor: Double) {
@@ -73,19 +79,47 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 			return self
 		}
 
-		// TODO: Calculate next delay
+		if elapsedTimeMillis >= Double(maxElapsedTimeMillis) {
+			self.currentState = .Failed
+			return self
+		}
 
-		// TODO: Async run after -> delay! (background)
+		// Calculate next delay
+		var currentDelay: Double
 
-		currentState = .Running
-		backOff.run() { success in
-			if success == true {
-				self.currentState = BackOffState.Succeeded
-				return self.currentState
+		if let lastValue = lastIntervallMilis {
+			if lastValue <= 0 {
+				lastIntervallMilis = Double(initialIntervalMillis)
 			} else {
-				// TODO: Run Async
-				self.algorithm(backOff)
-				return self.currentState
+				lastIntervallMilis = lastValue * multiplier
+			}
+		} else {
+			lastIntervallMilis = Double(initialIntervalMillis)
+		}
+		let lower: Double = 1 - randomizationFactor
+		let upper: Double = 1 + randomizationFactor
+
+		currentDelay = lastIntervallMilis * Random.within(lower ... upper)
+
+		currentDelay = currentDelay > Double(maxIntervalMillis) ? Double(maxIntervalMillis) : currentDelay
+
+		elapsedTimeMillis = elapsedTimeMillis + currentDelay
+
+		// Set state to .Running
+		currentState = .Running
+
+		Async.background(after: Tools.millisToSeconds(currentDelay)) {
+			backOff.run(Int(currentDelay), elapsedTimeMillis: Int(self.elapsedTimeMillis))
+			{ success in
+				if success == true {
+					self.currentState = BackOffState.Succeeded
+					return self.currentState
+				} else {
+					Async.background {
+						self.algorithm(backOff)
+					}
+					return self.currentState
+				}
 			}
 		}
 
@@ -104,7 +138,11 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 		if currentState != .Running && attempts != 0 {
 			if let backOff = savedBackOff {
 				attempts = 0
-				self.algorithm(backOff)
+				lastIntervallMilis = nil
+				elapsedTimeMillis = 0
+				Async.background {
+					self.algorithm(backOff)
+				}
 			}
 		}
 

@@ -44,9 +44,11 @@ public protocol BackOff {
 
 	 With `codeToRunAfterFinishedExecuting(success:)` ExponentialBackOff knows whether it should run another attempt or not. If you don't implement this, the BackOff won't work.
 
+	 - parameter lastIntervallMilis: You can read this Variable if you want to know how long the Executor waited before running this attempt (in milliseconds)
+	 - parameter elapsedTimeMillis: The total time waited already. If this exceeds `maxElapsedTimeMillis` the algorithm stops executing.
 	 - parameter codeToRunAfterFinishedExecuting: Call after your code finished executing and you know the result
 	 */
-	func run(codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
+	func run(lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
 }
 
 public struct BackOffProperties {
@@ -63,6 +65,8 @@ public struct BackOffProperties {
 
 	/**
 	 The default maximum back off time in milliseconds (1 minute).
+
+	 Once the current interval reaches this value it stops increasing.
 	 */
 	public static let DEFAULT_MAX_INTERVAL_MILLIS: Int = 60000
 
