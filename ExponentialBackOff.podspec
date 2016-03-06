@@ -36,7 +36,7 @@ You also have the option to implement your own algorithm without worrying about 
   s.osx.deployment_target = "10.10"
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
-  s.watchos.deployment_target = "2.0"
+  # s.watchos.deployment_target = "2.0"
   s.requires_arc = true
 
   s.source_files = 'ExponentialBackOff/ExponentialBackOff/**/*'
