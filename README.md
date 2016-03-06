@@ -57,9 +57,9 @@ let builder = ExponentialBackOffInstance.Builder()
 let exponentialBackOff = ExponentialBackOffInstance(builder: builder)
 
 ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
-    (lastIntervallMilis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+    (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
     
-    print("Last interval: \(lastIntervallMilis)")
+    print("Last interval: \(lastIntervallMillis)")
     print("Elapsed time overall: \(elapsedTimeMillis)")
     
     let randomNumber = arc4random_uniform(100)
@@ -94,10 +94,10 @@ builder.multiplier = 2.0
 let exponentialBackOff = ExponentialBackOffInstance(builder: builder)
 
 ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
-    (lastIntervallMilis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+    (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
     
     // Last interval millis is never greater than maxIntervalMillis
-    print("Last interval: \(lastIntervallMilis)")
+    print("Last interval: \(lastIntervallMillis)")
     
     // If the elapsedTime exceeds maxElapsedTimeMillis the ExponentialBackOffInstance exits with
     // BackOffState.Failed as the currentState

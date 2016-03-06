@@ -46,7 +46,7 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 	// MARK: - Algorithm specific private Properties
 	private var savedBackOff: BackOff?
 
-	private var lastIntervallMilis: Double!
+	private var lastIntervallMillis: Double!
 
 	private var elapsedTimeMillis: Double = 0
 
@@ -87,19 +87,19 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 		// Calculate next delay
 		var currentDelay: Double
 
-		if let lastValue = lastIntervallMilis {
+		if let lastValue = lastIntervallMillis {
 			if lastValue <= 0 {
-				lastIntervallMilis = Double(initialIntervalMillis)
+				lastIntervallMillis = Double(initialIntervalMillis)
 			} else {
-				lastIntervallMilis = lastValue * multiplier
+				lastIntervallMillis = lastValue * multiplier
 			}
 		} else {
-			lastIntervallMilis = Double(initialIntervalMillis)
+			lastIntervallMillis = Double(initialIntervalMillis)
 		}
 		let lower: Double = 1 - randomizationFactor
 		let upper: Double = 1 + randomizationFactor
 
-		currentDelay = lastIntervallMilis * Random.within(lower ... upper)
+		currentDelay = lastIntervallMillis * Random.within(lower ... upper)
 
 		currentDelay = currentDelay > Double(maxIntervalMillis) ? Double(maxIntervalMillis) : currentDelay
 
@@ -138,7 +138,7 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 		if currentState != .Running && attempts != 0 {
 			if let backOff = savedBackOff {
 				attempts = 0
-				lastIntervallMilis = nil
+				lastIntervallMillis = nil
 				elapsedTimeMillis = 0
 				Async.background {
 					self.algorithm(backOff)

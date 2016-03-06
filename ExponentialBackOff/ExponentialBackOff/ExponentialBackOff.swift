@@ -34,7 +34,7 @@ public class ExponentialBackOff {
 	 let exponentialBackOff = ExponentialBackOffInstance(builder: builder)
 
 	 ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
-	 ....(lastIntervallMilis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+	 ....(lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
 
 	 ....Async.background {
 	 ........var number: Int = 0
@@ -43,7 +43,7 @@ public class ExponentialBackOff {
 	 ........}
 	 ........Async.main {
 	 ............print(number)
-	 ............print("lastIntervallMillis: \(lastIntervallMilis)")
+	 ............print("lastIntervallMillis: \(lastIntervallMillis)")
 	 ............print("elapsedTimeMillis: \(elapsedTimeMillis)")
 	 ............if number != 100 {
 	 ................codeToRunAfterFinishedExecuting(success: false)
@@ -57,20 +57,20 @@ public class ExponentialBackOff {
 
 	 Due to the fact that this is a singleton, you must call `ExponentialBackOff.sharedInstance` in order to get an instance of `ExponentialBackOff`.
 	 */
-	public func runGeneralBackOff(backOff: BackOffAlgorithm, codeToRun: (lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
+	public func runGeneralBackOff(backOff: BackOffAlgorithm, codeToRun: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
 
 		let backOffClosure: () -> BackOff = {
 
 			class BackOffInstance: BackOff {
 
-				let code: (lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
+				let code: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
 
-				init(code: (lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
+				init(code: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
 					self.code = code
 				}
 
-				func run(lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void {
-					self.code(lastIntervallMilis: lastIntervallMilis, elapsedTimeMillis: elapsedTimeMillis) { success in
+				func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void {
+					self.code(lastIntervallMillis: lastIntervallMillis, elapsedTimeMillis: elapsedTimeMillis) { success in
 						codeToRunAfterFinishedExecuting(success: success)
 					}
 				}

@@ -33,16 +33,16 @@ You also have the option to implement your own algorithm without worrying about 
 
   # s.ios.platform     = :ios, '8.0'
   # s.osx.platform     = :osx, '10.10'
-  # s.osx.deployment_target = "10.10"
+  s.osx.deployment_target = "10.10"
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
   # s.watchos.deployment_target = "2.0"
   s.requires_arc = true
 
   s.source_files = 'ExponentialBackOff/ExponentialBackOff/**/*'
-  s.resource_bundles = {
-    'ExponentialBackOff' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #   'ExponentialBackOff' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

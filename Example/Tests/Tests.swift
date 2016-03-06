@@ -9,7 +9,7 @@ class TableOfContentsSpec: QuickSpec {
 
 	class TestBackOff: BackOff {
 
-		func run(lastIntervallMilis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) {
+		func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) {
 			Async.background {
 				var number: Int = 0
 				for i in 1 ... 10000 {
@@ -17,7 +17,7 @@ class TableOfContentsSpec: QuickSpec {
 				}
 				Async.main {
 					print(number)
-					print("lastIntervallMillis: \(lastIntervallMilis)")
+					print("lastIntervallMillis: \(lastIntervallMillis)")
 					print("elapsedTimeMillis: \(elapsedTimeMillis)")
 					if number != 100 {
 						codeToRunAfterFinishedExecuting(success: false)
