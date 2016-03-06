@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ExponentialBackOff"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "A framework which implements the ExponentialBackOff algorithm which is usefull for Networking."
 
 # This description is used to generate tags and improve search results.
