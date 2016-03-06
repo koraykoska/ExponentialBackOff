@@ -69,7 +69,7 @@ public class ExponentialBackOffInstance: BackOffAlgorithm {
 
 	// MARK: - BackOffAlgorithm fields
 
-	public var currentState: BackOffState = BackOffState.Stopped
+	public private(set) var currentState: BackOffState = BackOffState.Stopped
 
 	public func algorithm(backOff: BackOff) -> BackOffAlgorithm {
 		self.savedBackOff = backOff

@@ -85,4 +85,16 @@ public class ExponentialBackOff {
 
 		allBackOffInstances.append(backOff)
 	}
+
+	/**
+	 If you want to pass a custom class instead of a closure you can implement `BackOff` to your class and use this method instead of `runGeneralBackOff(backOff:codeToRun:)`
+	 */
+	public func runGeneralBackOff(backOff: BackOffAlgorithm, backOffProtocolToRun: BackOff) {
+
+		Async.background {
+			backOff.algorithm(backOffProtocolToRun)
+		}
+
+		allBackOffInstances.append(backOff)
+	}
 }
