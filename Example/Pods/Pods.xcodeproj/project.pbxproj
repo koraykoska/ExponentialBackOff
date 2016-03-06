@@ -26,7 +26,6 @@
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07632B947DA0ADB21064E8DE2EC49F /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B32F28A8C1C2B27188F9CB83994A74 /* AssertionDispatcher.swift */; };
 		33F6737CA7DFFFDACCAFA64F9EC8D776 /* ExponentialBackOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BBF742E218A10ED21CDDD3D0A38EEE /* ExponentialBackOff.swift */; };
-		39FB0A3C68B20CAF9CFE9F363E8D9B35 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 234CBCC37A2CDE0B7FC509C204FA8B49 /* Info.plist */; };
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56F6150AD3F282226CF77391195394C /* EndWith.swift */; };
 		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3E6C4DA59396E2FCF188F370578BBA /* MatcherFunc.swift */; };
 		3C7BC3163442ABBC4D7420945F396E80 /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 845FDBC3088C64F49118C0C03BBF6AD9 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -184,7 +183,6 @@
 		1F55C8AF1404FE3DF8C6D780B0471616 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		2014305399750680A2E06F7EC0483200 /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
 		2227FB713566216089C29149AD56E976 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Nimble/Nimble.h; sourceTree = "<group>"; };
-		234CBCC37A2CDE0B7FC509C204FA8B49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F3B8B06B61C3259490910A73ECAEAA /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		269A7FB25D94B57FA243F5C703C942C9 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		291EC7073EF3F9972D4EB1D0FE36EB2B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -442,7 +440,6 @@
 				638A79E7EBB6E3C7578A4C08B9CF1DF0 /* ExponentialBackOff.h */,
 				F9BBF742E218A10ED21CDDD3D0A38EEE /* ExponentialBackOff.swift */,
 				5F88DD96861ACB210F1B66F7651C9A68 /* ExponentialBackOffInstance.swift */,
-				234CBCC37A2CDE0B7FC509C204FA8B49 /* Info.plist */,
 				7AD597AC26B806BEF19B7C99EA8B9F9D /* Random.swift */,
 				D9EAB7FCA229E4563EE3F6EC777AB0DA /* Tools.swift */,
 			);
@@ -917,7 +914,6 @@
 				9A0F6313D7C9A3D12A70386AA8ABFABF /* ExponentialBackOff-dummy.m in Sources */,
 				33F6737CA7DFFFDACCAFA64F9EC8D776 /* ExponentialBackOff.swift in Sources */,
 				4E6EC498CCCE377C1760A1120C9EAB47 /* ExponentialBackOffInstance.swift in Sources */,
-				39FB0A3C68B20CAF9CFE9F363E8D9B35 /* Info.plist in Sources */,
 				6B77E2276B5DE686E6BEF379F30D04A8 /* Random.swift in Sources */,
 				A68D71DFD2132785A089D560C6B3869A /* Tools.swift in Sources */,
 			);
