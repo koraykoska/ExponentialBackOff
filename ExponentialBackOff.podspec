@@ -39,7 +39,7 @@ You also have the option to implement your own algorithm without worrying about 
   # s.watchos.deployment_target = "2.0"
   s.requires_arc = true
 
-  s.source_files = 'ExponentialBackOff/ExponentialBackOff/**/*'
+  s.source_files = 'ExponentialBackOff/ExponentialBackOff/**/*.swift'
   s.resource_bundles = {
     'ExponentialBackOff' => ['Pod/Assets/*.png']
   }
