@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "ExponentialBackOff"
   s.version          = "0.1.0"
-  s.summary          = "A framework which implements the ExponentialBackOff algorithm which is usefull for Networking. Also, this algorithm was mentioned by Google to be used to request an GCM token."
+  s.summary          = "A framework which implements the ExponentialBackOff algorithm which is usefull for Networking."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -31,8 +31,10 @@ You also have the option to implement your own algorithm without worrying about 
   s.source           = { :git => "https://github.com/Ybrin/ExponentialBackOff.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.platform     = :ios, '8.0'
-  s.osx.platform     = :osx, '10.10'
+  # s.ios.platform     = :ios, '8.0'
+  # s.osx.platform     = :osx, '10.10'
+  s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = "8.0"
   s.requires_arc = true
 
   s.source_files = 'ExponentialBackOff/ExponentialBackOff/**/*'
