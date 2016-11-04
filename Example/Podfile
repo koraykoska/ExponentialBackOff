@@ -1,13 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'ExponentialBackOff_Example', :exclusive => true do
-  pod 'ExponentialBackOff', :path => '../'
-end
+target 'ExponentialBackOff_Example' do
+  pod 'ExponentialBackOff', :path => "../"
 
-target 'ExponentialBackOff_Tests', :exclusive => true do
-  pod 'ExponentialBackOff', :path => '../'
+  target 'ExponentialBackOff_Tests' do
+    inherit! :search_paths
 
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '3.0.0'
+    pod 'Quick', '~> 0.10'
+    pod 'Nimble', '~> 5.1'
+  end
 end

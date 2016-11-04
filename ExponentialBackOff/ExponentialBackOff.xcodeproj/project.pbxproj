@@ -15,7 +15,7 @@
 		0EF4AED01C8A59EA0021C8DC /* ExponentialBackOffInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AECB1C8A59EA0021C8DC /* ExponentialBackOffInstance.swift */; };
 		0EF4AED21C8A5FF60021C8DC /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AED11C8A5FF60021C8DC /* Random.swift */; };
 		0EF4AED41C8A61540021C8DC /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AED31C8A61540021C8DC /* Tools.swift */; };
-		136B0B644997CC559B0DCA79 /* Pods_ExponentialBackOff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF450B2EA130CB7BB53F52A9 /* Pods_ExponentialBackOff.framework */; };
+		7E90E8BF4D9CFFA7EF554759 /* Pods_ExponentialBackOff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D40BA1F9B44BA82C4241BED /* Pods_ExponentialBackOff.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		0EF4AECB1C8A59EA0021C8DC /* ExponentialBackOffInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExponentialBackOffInstance.swift; sourceTree = "<group>"; };
 		0EF4AED11C8A5FF60021C8DC /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		0EF4AED31C8A61540021C8DC /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		3648AC5E694E60ECBFD81BF8 /* Pods-ExponentialBackOff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.debug.xcconfig"; sourceTree = "<group>"; };
-		66405AEC42F378ED0E92CC20 /* Pods-ExponentialBackOff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.release.xcconfig"; sourceTree = "<group>"; };
-		DF450B2EA130CB7BB53F52A9 /* Pods_ExponentialBackOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B00FF2EF4860DE4F6CB6D99 /* Pods-ExponentialBackOff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.debug.xcconfig"; sourceTree = "<group>"; };
+		7D40BA1F9B44BA82C4241BED /* Pods_ExponentialBackOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B761C30BA1A997C4F3B00FF /* Pods-ExponentialBackOff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				136B0B644997CC559B0DCA79 /* Pods_ExponentialBackOff.framework in Frameworks */,
+				7E90E8BF4D9CFFA7EF554759 /* Pods_ExponentialBackOff.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +51,8 @@
 			children = (
 				0EF4AEBE1C8A59550021C8DC /* ExponentialBackOff */,
 				0EF4AEBD1C8A59550021C8DC /* Products */,
-				1C83CC1E7C92E71EEBA7DA51 /* Pods */,
-				309BB3017F8ABAF42F59F680 /* Frameworks */,
+				DA948AE7F6A20BE250805D47 /* Pods */,
+				DDC857AA745ACF64294FD2BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,19 +80,19 @@
 			path = ExponentialBackOff;
 			sourceTree = "<group>";
 		};
-		1C83CC1E7C92E71EEBA7DA51 /* Pods */ = {
+		DA948AE7F6A20BE250805D47 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3648AC5E694E60ECBFD81BF8 /* Pods-ExponentialBackOff.debug.xcconfig */,
-				66405AEC42F378ED0E92CC20 /* Pods-ExponentialBackOff.release.xcconfig */,
+				3B00FF2EF4860DE4F6CB6D99 /* Pods-ExponentialBackOff.debug.xcconfig */,
+				8B761C30BA1A997C4F3B00FF /* Pods-ExponentialBackOff.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		309BB3017F8ABAF42F59F680 /* Frameworks */ = {
+		DDC857AA745ACF64294FD2BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DF450B2EA130CB7BB53F52A9 /* Pods_ExponentialBackOff.framework */,
+				7D40BA1F9B44BA82C4241BED /* Pods_ExponentialBackOff.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,12 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EF4AEC41C8A59550021C8DC /* Build configuration list for PBXNativeTarget "ExponentialBackOff" */;
 			buildPhases = (
-				1EEB09FC5E514DC2C55DB84C /* Check Pods Manifest.lock */,
+				C9902437E60BA2BC6ACE0E14 /* [CP] Check Pods Manifest.lock */,
 				0EF4AEB71C8A59550021C8DC /* Sources */,
 				0EF4AEB81C8A59550021C8DC /* Frameworks */,
 				0EF4AEB91C8A59550021C8DC /* Headers */,
 				0EF4AEBA1C8A59550021C8DC /* Resources */,
-				0CE0C37482F197539F5EE836 /* Copy Pods Resources */,
+				C205A8A84E3E28FCAE362C21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,14 +173,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CE0C37482F197539F5EE836 /* Copy Pods Resources */ = {
+		C205A8A84E3E28FCAE362C21 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,19 +188,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1EEB09FC5E514DC2C55DB84C /* Check Pods Manifest.lock */ = {
+		C9902437E60BA2BC6ACE0E14 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -316,7 +316,7 @@
 		};
 		0EF4AEC51C8A59550021C8DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3648AC5E694E60ECBFD81BF8 /* Pods-ExponentialBackOff.debug.xcconfig */;
+			baseConfigurationReference = 3B00FF2EF4860DE4F6CB6D99 /* Pods-ExponentialBackOff.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -335,7 +335,7 @@
 		};
 		0EF4AEC61C8A59550021C8DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66405AEC42F378ED0E92CC20 /* Pods-ExponentialBackOff.release.xcconfig */;
+			baseConfigurationReference = 8B761C30BA1A997C4F3B00FF /* Pods-ExponentialBackOff.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;

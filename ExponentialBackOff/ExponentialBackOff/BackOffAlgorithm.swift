@@ -22,7 +22,7 @@ public protocol BackOffAlgorithm {
 
 	 - returns: self
 	 */
-	func algorithm(backOff: BackOff) -> BackOffAlgorithm
+	func algorithm(_ backOff: BackOff) -> BackOffAlgorithm
 
 	/**
 	 Should stop the execution if `currentState` is `BackOffState.Running`. Returns `BackOffState.Stopped` if it was running and has been stopped or `currentState`.

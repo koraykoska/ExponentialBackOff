@@ -9,17 +9,17 @@
 import Foundation
 import Async
 
-public class ExponentialBackOff {
+open class ExponentialBackOff {
 
-	public static let sharedInstance = ExponentialBackOff()
+	open static let sharedInstance = ExponentialBackOff()
 
-	private init() {
+	fileprivate init() {
 	}
 
 	/**
 	 Stores all BackOffAlgorithms which you can restart or stop manually
 	 */
-	public private(set) var allBackOffInstances = [BackOffAlgorithm]()
+	open fileprivate(set) var allBackOffInstances = [BackOffAlgorithm]()
 
 	/**
 	 Starts the given BackOffAlgorithm with the given closure as the code to run. The closure should always run `codeToRunAfterFinishedExecuting(success:)` when finished in order for the BackOffInstance to know what to do next
@@ -57,23 +57,23 @@ public class ExponentialBackOff {
 
 	 Due to the fact that this is a singleton, you must call `ExponentialBackOff.sharedInstance` in order to get an instance of `ExponentialBackOff`.
 	 */
-	public func runGeneralBackOff(backOff: BackOffAlgorithm, codeToRun: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
+	open func runGeneralBackOff(_ backOff: BackOffAlgorithm, codeToRun: @escaping (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void) {
 
 		let backOffClosure: () -> BackOff = {
 
-			class BackOffInstance: BackOff {
+            class BackOffInstance: BackOff {
 
-				let code: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
+				let code: (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void
 
-				init(code: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void) {
+				init(code: @escaping (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void) {
 					self.code = code
 				}
-
-				func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void {
-					self.code(lastIntervallMillis: lastIntervallMillis, elapsedTimeMillis: elapsedTimeMillis) { success in
-						codeToRunAfterFinishedExecuting(success: success)
-					}
-				}
+                
+                public func run(_ lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: @escaping (Bool) -> BackOffState) {
+                    self.code(lastIntervallMillis, elapsedTimeMillis) { success in
+                        codeToRunAfterFinishedExecuting(success)
+                    }
+                }
 			}
 			let object = BackOffInstance(code: codeToRun)
 			return object
@@ -89,7 +89,7 @@ public class ExponentialBackOff {
 	/**
 	 If you want to pass a custom class instead of a closure you can implement `BackOff` to your class and use this method instead of `runGeneralBackOff(backOff:codeToRun:)`
 	 */
-	public func runGeneralBackOff(backOff: BackOffAlgorithm, backOffProtocolToRun: BackOff) {
+	open func runGeneralBackOff(_ backOff: BackOffAlgorithm, backOffProtocolToRun: BackOff) {
 
 		Async.background {
 			backOff.algorithm(backOffProtocolToRun)

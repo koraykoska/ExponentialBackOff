@@ -37,10 +37,10 @@ class ViewController: UIViewController {
 	 }*/
 
 	// Define the closure which will be passed to the exponential backoff algorithm
-	let code: (lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void = { (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+	let code: (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void = { (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
 		Async.background {
 			var number: Int = 0
-			for i in 1 ... 10000 {
+            for i in 1 ... 10000 {
 				number = number + i
 			}
 			Async.main {
@@ -48,9 +48,9 @@ class ViewController: UIViewController {
 				print("lastIntervallMillis: \(lastIntervallMillis)")
 				print("elapsedTimeMillis: \(elapsedTimeMillis)")
 				if number != 100 {
-					codeToRunAfterFinishedExecuting(success: false)
+					_ = codeToRunAfterFinishedExecuting(false)
 				} else {
-					codeToRunAfterFinishedExecuting(success: true)
+                    _ = codeToRunAfterFinishedExecuting(true)
 				}
 			}
 		}

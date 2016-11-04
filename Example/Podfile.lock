@@ -1,23 +1,25 @@
 PODS:
-  - AsyncSwift (1.7.2)
-  - ExponentialBackOff (0.1.0):
-    - AsyncSwift (~> 1.7)
-  - Nimble (3.0.0)
-  - Quick (0.8.0)
+  - AsyncSwift (2.0.0)
+  - ExponentialBackOff (1.0.0):
+    - AsyncSwift (~> 2.0)
+  - Nimble (5.1.1)
+  - Quick (0.10.0)
 
 DEPENDENCIES:
   - ExponentialBackOff (from `../`)
-  - Nimble (= 3.0.0)
-  - Quick (~> 0.8.0)
+  - Nimble (~> 5.1)
+  - Quick (~> 0.10)
 
 EXTERNAL SOURCES:
   ExponentialBackOff:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
-  ExponentialBackOff: af34e951fe6692367c5a61af36a3bbb22be7d59b
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
-  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  AsyncSwift: 6ba6ed9ecb51344458063f7c86fe447ab824e313
+  ExponentialBackOff: 912f24e21966bcd6d4734b4fe229d3782c070637
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 622b94463b0ff5013f4656ed5939e4b588c5fc93
+
+COCOAPODS: 1.1.1

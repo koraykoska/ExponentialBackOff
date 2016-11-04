@@ -7,76 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1876C5C411BB80E373A2F5FF06E65908 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		2AAD8559A7E416702CE6539179B26CFB /* AsyncSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CAB0FE6C2934455B86E463B91A23E0 /* AsyncSwift-dummy.m */; };
-		50849099CDC287B4547E91E4D3F059E5 /* Pods-ExponentialBackOff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0017818AA963CAC102EC2E8B0AD32278 /* Pods-ExponentialBackOff-dummy.m */; };
-		7BEF2D2A7BA6D7D99D5F674C337B42BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A1402E09498287925DECA915C04DB448 /* AsyncSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E150956D2249CF76E32D3C67612E2CF /* AsyncSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFBC3405169EC62D3D6CC38549B64DF1 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A258ADABC97FBBE4AC26B739A1D579 /* Async.swift */; };
-		CCCFE5AF3C6D8F8F158978696A6F5FFF /* Pods-ExponentialBackOff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D92ECE29ECC253F4DDAB4A461DE57EF /* Pods-ExponentialBackOff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		184937148DAB00FCB0E8BCBD3223BB13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		1B44F3CDBC3B9C4D5337FB6E1BA4CD37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		65C7DA494CACA3FB380C0564330C035F /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A258ADABC97FBBE4AC26B739A1D579 /* Async.swift */; };
+		878A7EB83560F9B2703D36D186F6EC32 /* AsyncSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E150956D2249CF76E32D3C67612E2CF /* AsyncSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F899DAC4387338E4ADE9423D869CA5C /* AsyncSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CAB0FE6C2934455B86E463B91A23E0 /* AsyncSwift-dummy.m */; };
+		D659CC21153FBB015EEC85DB6AC6BCAF /* Pods-ExponentialBackOff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1972A79260DD736E3A4D517090D2A20A /* Pods-ExponentialBackOff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26E4C1401EFE86B0DEB86CB558C4728 /* Pods-ExponentialBackOff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82740B73113E80AF836CE72166882847 /* Pods-ExponentialBackOff-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A97571773DD8CD6979753DAB8D646FA /* PBXContainerItemProxy */ = {
+		577EA425FC5C25DD0F595DF33A2AD2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E155FBB6070C868840C7A2BB6E75E85;
+			remoteGlobalIDString = 7F45F2F21482C3777494ACE42307212D;
 			remoteInfo = AsyncSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0017818AA963CAC102EC2E8B0AD32278 /* Pods-ExponentialBackOff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExponentialBackOff-dummy.m"; sourceTree = "<group>"; };
-		0AAFD2F393D8A2FA507412208FC0BB56 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0149990490A6E0E744C1144D48E8CCAD /* Pods-ExponentialBackOff-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExponentialBackOff-acknowledgements.markdown"; sourceTree = "<group>"; };
 		13A1ADF2F0A5BCAE32890B4F6B95A162 /* AsyncSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AsyncSwift-prefix.pch"; sourceTree = "<group>"; };
+		1972A79260DD736E3A4D517090D2A20A /* Pods-ExponentialBackOff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExponentialBackOff-umbrella.h"; sourceTree = "<group>"; };
 		19CAB0FE6C2934455B86E463B91A23E0 /* AsyncSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AsyncSwift-dummy.m"; sourceTree = "<group>"; };
 		2E150956D2249CF76E32D3C67612E2CF /* AsyncSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AsyncSwift-umbrella.h"; sourceTree = "<group>"; };
-		317000C2E070CE812072AE11AD2841DC /* Pods-ExponentialBackOff-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExponentialBackOff-resources.sh"; sourceTree = "<group>"; };
 		34ECAC6F3B33E44BEDFB522C1B4D8A41 /* AsyncSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AsyncSwift.xcconfig; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		45E106F70858EFA692301458FCA392FC /* Pods_ExponentialBackOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExponentialBackOff.framework; path = "Pods-ExponentialBackOff.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A258ADABC97FBBE4AC26B739A1D579 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Source/Async.swift; sourceTree = "<group>"; };
-		4D92ECE29ECC253F4DDAB4A461DE57EF /* Pods-ExponentialBackOff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExponentialBackOff-umbrella.h"; sourceTree = "<group>"; };
-		5432372926DAEC370A31904CD943933D /* Pods_ExponentialBackOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5651B0D5EAA3C280E99F0F6A8F408387 /* Pods-ExponentialBackOff-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExponentialBackOff-acknowledgements.markdown"; sourceTree = "<group>"; };
-		809AF4D5A444C4BE4846470DB04644D2 /* Pods-ExponentialBackOff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExponentialBackOff.release.xcconfig"; sourceTree = "<group>"; };
+		5133B317883BC6580C8725CBBADEC512 /* Pods-ExponentialBackOff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExponentialBackOff.release.xcconfig"; sourceTree = "<group>"; };
+		5D028BCB66ACC8DCAF439B3638657ABB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F0762F7AFAFC4A3E5658ED585F462A5 /* Pods-ExponentialBackOff-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExponentialBackOff-resources.sh"; sourceTree = "<group>"; };
+		79C396C3ECAE8B734A9C8C4FDA336AC7 /* Async.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Async.framework; path = AsyncSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		817EFF97470CAF48CCB4AB604A2233FF /* Pods-ExponentialBackOff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExponentialBackOff.debug.xcconfig"; sourceTree = "<group>"; };
+		82740B73113E80AF836CE72166882847 /* Pods-ExponentialBackOff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExponentialBackOff-dummy.m"; sourceTree = "<group>"; };
+		8C0FE576396BE9662726EE302865FDAF /* Pods-ExponentialBackOff-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExponentialBackOff-acknowledgements.plist"; sourceTree = "<group>"; };
 		8C35B4DFDDBB77EAE880B4F32CD7D605 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F8ABEA5A9AD5ED361018C71C5D5BFD9 /* Pods-ExponentialBackOff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ExponentialBackOff.modulemap"; sourceTree = "<group>"; };
-		A997CE798E531386A9178C0F977914F7 /* Pods-ExponentialBackOff-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExponentialBackOff-acknowledgements.plist"; sourceTree = "<group>"; };
-		ACBCD75C7E3B29A1659CE214214B9B58 /* Pods-ExponentialBackOff-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ExponentialBackOff-frameworks.sh"; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C47851820019C60DBD366BA1BD1B5957 /* AsyncSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AsyncSwift.modulemap; sourceTree = "<group>"; };
-		C964515F26C47E334CDE0D101CA81422 /* Pods-ExponentialBackOff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExponentialBackOff.debug.xcconfig"; sourceTree = "<group>"; };
-		FB78FB6F0256AA6239F3015944A8968B /* Async.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Async.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B95AEC042E252E856E6D24B1FD60C11F /* Pods-ExponentialBackOff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ExponentialBackOff.modulemap"; sourceTree = "<group>"; };
+		C47851820019C60DBD366BA1BD1B5957 /* AsyncSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AsyncSwift.modulemap; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1905ACEFDB99827B702E87B22EAB1F53 /* Frameworks */ = {
+		14E21E825727DA0A150055F3778E7C95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BEF2D2A7BA6D7D99D5F674C337B42BA /* Foundation.framework in Frameworks */,
+				184937148DAB00FCB0E8BCBD3223BB13 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BE2E705A6C2FE8B28A89383A4326A60 /* Frameworks */ = {
+		E24661E328CBA6B9CC6D5127E19825E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1876C5C411BB80E373A2F5FF06E65908 /* Foundation.framework in Frameworks */,
+				1B44F3CDBC3B9C4D5337FB6E1BA4CD37 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		198314884F5FF250B65422E1889929E2 /* Products */ = {
+		0763CE4A268A7D21A9F880D8163ADA6C /* Pods-ExponentialBackOff */ = {
 			isa = PBXGroup;
 			children = (
-				FB78FB6F0256AA6239F3015944A8968B /* Async.framework */,
-				5432372926DAEC370A31904CD943933D /* Pods_ExponentialBackOff.framework */,
+				5D028BCB66ACC8DCAF439B3638657ABB /* Info.plist */,
+				B95AEC042E252E856E6D24B1FD60C11F /* Pods-ExponentialBackOff.modulemap */,
+				0149990490A6E0E744C1144D48E8CCAD /* Pods-ExponentialBackOff-acknowledgements.markdown */,
+				8C0FE576396BE9662726EE302865FDAF /* Pods-ExponentialBackOff-acknowledgements.plist */,
+				82740B73113E80AF836CE72166882847 /* Pods-ExponentialBackOff-dummy.m */,
+				5F0762F7AFAFC4A3E5658ED585F462A5 /* Pods-ExponentialBackOff-resources.sh */,
+				1972A79260DD736E3A4D517090D2A20A /* Pods-ExponentialBackOff-umbrella.h */,
+				817EFF97470CAF48CCB4AB604A2233FF /* Pods-ExponentialBackOff.debug.xcconfig */,
+				5133B317883BC6580C8725CBBADEC512 /* Pods-ExponentialBackOff.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-ExponentialBackOff";
+			path = "Target Support Files/Pods-ExponentialBackOff";
 			sourceTree = "<group>";
 		};
 		32A0936898DD16900B98FBB0076E235D /* Pods */ = {
@@ -87,14 +94,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				32A0936898DD16900B98FBB0076E235D /* Pods */,
-				198314884F5FF250B65422E1889929E2 /* Products */,
-				D8985B60A4A14ED85DD664BC6DE66350 /* Targets Support Files */,
+				924188A9116C96ED91016619A7D90280 /* Products */,
+				D85E419E1F233C5E6AF0B60C4C5AFF79 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,41 +119,25 @@
 				49A258ADABC97FBBE4AC26B739A1D579 /* Async.swift */,
 				D00EDA2B2C781A48CCF5DF69386C98E2 /* Support Files */,
 			);
+			name = AsyncSwift;
 			path = AsyncSwift;
 			sourceTree = "<group>";
 		};
-		A6D9BD8903F0F53E94D3FC3B2BDB2713 /* Pods-ExponentialBackOff */ = {
+		924188A9116C96ED91016619A7D90280 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AAFD2F393D8A2FA507412208FC0BB56 /* Info.plist */,
-				9F8ABEA5A9AD5ED361018C71C5D5BFD9 /* Pods-ExponentialBackOff.modulemap */,
-				5651B0D5EAA3C280E99F0F6A8F408387 /* Pods-ExponentialBackOff-acknowledgements.markdown */,
-				A997CE798E531386A9178C0F977914F7 /* Pods-ExponentialBackOff-acknowledgements.plist */,
-				0017818AA963CAC102EC2E8B0AD32278 /* Pods-ExponentialBackOff-dummy.m */,
-				ACBCD75C7E3B29A1659CE214214B9B58 /* Pods-ExponentialBackOff-frameworks.sh */,
-				317000C2E070CE812072AE11AD2841DC /* Pods-ExponentialBackOff-resources.sh */,
-				4D92ECE29ECC253F4DDAB4A461DE57EF /* Pods-ExponentialBackOff-umbrella.h */,
-				C964515F26C47E334CDE0D101CA81422 /* Pods-ExponentialBackOff.debug.xcconfig */,
-				809AF4D5A444C4BE4846470DB04644D2 /* Pods-ExponentialBackOff.release.xcconfig */,
+				79C396C3ECAE8B734A9C8C4FDA336AC7 /* Async.framework */,
+				45E106F70858EFA692301458FCA392FC /* Pods_ExponentialBackOff.framework */,
 			);
-			name = "Pods-ExponentialBackOff";
-			path = "Target Support Files/Pods-ExponentialBackOff";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		D00EDA2B2C781A48CCF5DF69386C98E2 /* Support Files */ = {
@@ -155,10 +154,10 @@
 			path = "../Target Support Files/AsyncSwift";
 			sourceTree = "<group>";
 		};
-		D8985B60A4A14ED85DD664BC6DE66350 /* Targets Support Files */ = {
+		D85E419E1F233C5E6AF0B60C4C5AFF79 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A6D9BD8903F0F53E94D3FC3B2BDB2713 /* Pods-ExponentialBackOff */,
+				0763CE4A268A7D21A9F880D8163ADA6C /* Pods-ExponentialBackOff */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -166,50 +165,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		170B579A18E66321213347B0CCFC29B5 /* Headers */ = {
+		74D0EA0F0E4362FCED5D5A61EA7B1F8B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1402E09498287925DECA915C04DB448 /* AsyncSwift-umbrella.h in Headers */,
+				878A7EB83560F9B2703D36D186F6EC32 /* AsyncSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2966A3768B8C54BE2D1758BB29E09E67 /* Headers */ = {
+		DE83EEBEAB28226E36845A6910156AAA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCCFE5AF3C6D8F8F158978696A6F5FFF /* Pods-ExponentialBackOff-umbrella.h in Headers */,
+				D659CC21153FBB015EEC85DB6AC6BCAF /* Pods-ExponentialBackOff-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2B7BE03B2DA4B103129D10BCC1A17C3A /* Pods-ExponentialBackOff */ = {
+		7F45F2F21482C3777494ACE42307212D /* AsyncSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BD4018FF9AD4C4641DA7D21813FD043 /* Build configuration list for PBXNativeTarget "Pods-ExponentialBackOff" */;
+			buildConfigurationList = CDB54977543F768C7A6C9DB874B679CC /* Build configuration list for PBXNativeTarget "AsyncSwift" */;
 			buildPhases = (
-				125A4759C0946670F527AA59376495ED /* Sources */,
-				1905ACEFDB99827B702E87B22EAB1F53 /* Frameworks */,
-				2966A3768B8C54BE2D1758BB29E09E67 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EBF2148B938CCB7324D7431233650088 /* PBXTargetDependency */,
-			);
-			name = "Pods-ExponentialBackOff";
-			productName = "Pods-ExponentialBackOff";
-			productReference = 5432372926DAEC370A31904CD943933D /* Pods_ExponentialBackOff.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4E155FBB6070C868840C7A2BB6E75E85 /* AsyncSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 055B7B7B893A1F82F2471AA1001BA79B /* Build configuration list for PBXNativeTarget "AsyncSwift" */;
-			buildPhases = (
-				BAA580FE91EEEA313081F06B5AAB77C4 /* Sources */,
-				6BE2E705A6C2FE8B28A89383A4326A60 /* Frameworks */,
-				170B579A18E66321213347B0CCFC29B5 /* Headers */,
+				F600B02DB5C78F3567ED539B846A8E1D /* Sources */,
+				E24661E328CBA6B9CC6D5127E19825E9 /* Frameworks */,
+				74D0EA0F0E4362FCED5D5A61EA7B1F8B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -217,7 +198,25 @@
 			);
 			name = AsyncSwift;
 			productName = AsyncSwift;
-			productReference = FB78FB6F0256AA6239F3015944A8968B /* Async.framework */;
+			productReference = 79C396C3ECAE8B734A9C8C4FDA336AC7 /* Async.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84F813ED5C1465C60E3A838F0B53F35B /* Pods-ExponentialBackOff */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B78F41368ED2F959F498D7EF6B6BDA /* Build configuration list for PBXNativeTarget "Pods-ExponentialBackOff" */;
+			buildPhases = (
+				2CC2B23127A55681AF70ADFEC00C1D6F /* Sources */,
+				14E21E825727DA0A150055F3778E7C95 /* Frameworks */,
+				DE83EEBEAB28226E36845A6910156AAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4985AA48C2D1DB88AFCD68E58DC5DC90 /* PBXTargetDependency */,
+			);
+			name = "Pods-ExponentialBackOff";
+			productName = "Pods-ExponentialBackOff";
+			productReference = 45E106F70858EFA692301458FCA392FC /* Pods_ExponentialBackOff.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +225,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -237,84 +236,61 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 198314884F5FF250B65422E1889929E2 /* Products */;
+			productRefGroup = 924188A9116C96ED91016619A7D90280 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E155FBB6070C868840C7A2BB6E75E85 /* AsyncSwift */,
-				2B7BE03B2DA4B103129D10BCC1A17C3A /* Pods-ExponentialBackOff */,
+				7F45F2F21482C3777494ACE42307212D /* AsyncSwift */,
+				84F813ED5C1465C60E3A838F0B53F35B /* Pods-ExponentialBackOff */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		125A4759C0946670F527AA59376495ED /* Sources */ = {
+		2CC2B23127A55681AF70ADFEC00C1D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50849099CDC287B4547E91E4D3F059E5 /* Pods-ExponentialBackOff-dummy.m in Sources */,
+				E26E4C1401EFE86B0DEB86CB558C4728 /* Pods-ExponentialBackOff-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAA580FE91EEEA313081F06B5AAB77C4 /* Sources */ = {
+		F600B02DB5C78F3567ED539B846A8E1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBC3405169EC62D3D6CC38549B64DF1 /* Async.swift in Sources */,
-				2AAD8559A7E416702CE6539179B26CFB /* AsyncSwift-dummy.m in Sources */,
+				65C7DA494CACA3FB380C0564330C035F /* Async.swift in Sources */,
+				8F899DAC4387338E4ADE9423D869CA5C /* AsyncSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EBF2148B938CCB7324D7431233650088 /* PBXTargetDependency */ = {
+		4985AA48C2D1DB88AFCD68E58DC5DC90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AsyncSwift;
-			target = 4E155FBB6070C868840C7A2BB6E75E85 /* AsyncSwift */;
-			targetProxy = 1A97571773DD8CD6979753DAB8D646FA /* PBXContainerItemProxy */;
+			target = 7F45F2F21482C3777494ACE42307212D /* AsyncSwift */;
+			targetProxy = 577EA425FC5C25DD0F595DF33A2AD2A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		15CF7D027BB2AFB39E6DF45D4CF2AF3B /* Release */ = {
+		2187188F8DC7DB55B7CB780D1B2EA848 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34ECAC6F3B33E44BEDFB522C1B4D8A41 /* AsyncSwift.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AsyncSwift/AsyncSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AsyncSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AsyncSwift/AsyncSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Async;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		45F2576EF83AA5CEF505EAA8628B0C00 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34ECAC6F3B33E44BEDFB522C1B4D8A41 /* AsyncSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/AsyncSwift/AsyncSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AsyncSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -332,20 +308,24 @@
 			};
 			name = Debug;
 		};
-		510F29879055E5BDFB26B171276C38B8 /* Release */ = {
+		29F4265E55CAF82D47DB493896B1F46B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 809AF4D5A444C4BE4846470DB04644D2 /* Pods-ExponentialBackOff.release.xcconfig */;
+			baseConfigurationReference = 5133B317883BC6580C8725CBBADEC512 /* Pods-ExponentialBackOff.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-ExponentialBackOff/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.modulemap";
@@ -353,6 +333,7 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ExponentialBackOff;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -362,41 +343,11 @@
 			};
 			name = Release;
 		};
-		60E98FDD5EB01A1405ECB2396035136A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C964515F26C47E334CDE0D101CA81422 /* Pods-ExponentialBackOff.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ExponentialBackOff/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ExponentialBackOff;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -410,11 +361,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -425,17 +379,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -449,49 +405,121 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
+		F426A4499C8887E39C5518A74CF372E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34ECAC6F3B33E44BEDFB522C1B4D8A41 /* AsyncSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AsyncSwift/AsyncSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AsyncSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AsyncSwift/AsyncSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Async;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F51E1751ABF5C6A4C9996DC5D46BC41B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817EFF97470CAF48CCB4AB604A2233FF /* Pods-ExponentialBackOff.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ExponentialBackOff/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ExponentialBackOff/Pods-ExponentialBackOff.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ExponentialBackOff;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		055B7B7B893A1F82F2471AA1001BA79B /* Build configuration list for PBXNativeTarget "AsyncSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45F2576EF83AA5CEF505EAA8628B0C00 /* Debug */,
-				15CF7D027BB2AFB39E6DF45D4CF2AF3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
-				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BD4018FF9AD4C4641DA7D21813FD043 /* Build configuration list for PBXNativeTarget "Pods-ExponentialBackOff" */ = {
+		50B78F41368ED2F959F498D7EF6B6BDA /* Build configuration list for PBXNativeTarget "Pods-ExponentialBackOff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				60E98FDD5EB01A1405ECB2396035136A /* Debug */,
-				510F29879055E5BDFB26B171276C38B8 /* Release */,
+				F51E1751ABF5C6A4C9996DC5D46BC41B /* Debug */,
+				29F4265E55CAF82D47DB493896B1F46B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB54977543F768C7A6C9DB874B679CC /* Build configuration list for PBXNativeTarget "AsyncSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2187188F8DC7DB55B7CB780D1B2EA848 /* Debug */,
+				F426A4499C8887E39C5518A74CF372E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

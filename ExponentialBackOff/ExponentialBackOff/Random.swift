@@ -9,18 +9,26 @@
 import Foundation
 
 struct Random {
-	static func within<B: protocol<Comparable, ForwardIndexType>>(range: ClosedInterval<B>) -> B {
-		let inclusiveDistance = range.start.distanceTo(range.end).successor()
-		let randomAdvance = B.Distance(arc4random_uniform(UInt32(inclusiveDistance.toIntMax())).toIntMax())
-		return range.start.advancedBy(randomAdvance)
+    
+    static func within(_ range: ClosedRange<Int>) -> Int {
+        var offset = 0
+        
+        if range.lowerBound < 0 {
+            offset = abs(range.lowerBound)
+        }
+        
+        let mini = UInt32(range.lowerBound + offset)
+        let maxi = UInt32(range.upperBound + offset)
+        
+        return Int(mini + arc4random_uniform(maxi - mini)) - offset
+    }
+
+	static func within(_ range: ClosedRange<Float>) -> Float {
+		return (range.upperBound - range.lowerBound) * Float(Float(arc4random()) / Float(UInt32.max)) + range.lowerBound
 	}
 
-	static func within(range: ClosedInterval<Float>) -> Float {
-		return (range.end - range.start) * Float(Float(arc4random()) / Float(UInt32.max)) + range.start
-	}
-
-	static func within(range: ClosedInterval<Double>) -> Double {
-		return (range.end - range.start) * Double(Double(arc4random()) / Double(UInt32.max)) + range.start
+	static func within(_ range: ClosedRange<Double>) -> Double {
+		return (range.upperBound - range.lowerBound) * Double(Double(arc4random()) / Double(UInt32.max)) + range.lowerBound
 	}
 
 	static func generate() -> Int {

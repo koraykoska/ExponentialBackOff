@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01B5EEB6A62969F25349DEA7 /* Pods_ExponentialBackOff_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E084C08100745A08F480CBE9 /* Pods_ExponentialBackOff_Example.framework */; };
+		30AC8C3ED7B5307EC80B6D0E /* Pods_ExponentialBackOff_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB0F4AA07816F3E99EC5873 /* Pods_ExponentialBackOff_Example.framework */; };
+		41262BAF7858F7C6A8DF765B /* Pods_ExponentialBackOff_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD79422C28EC10F9117C27B0 /* Pods_ExponentialBackOff_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		8C5A65A3BF07CDEC61DC5421 /* Pods_ExponentialBackOff_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60339FF3B3354ACCA7806427 /* Pods_ExponentialBackOff_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		17DF0D96B9F51322B4F9FE3D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		266C716E4FF1758949DAE883 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		60339FF3B3354ACCA7806427 /* Pods_ExponentialBackOff_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA2879F578BE4AD8AB3BAEC /* Pods-ExponentialBackOff_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1E442743CE309CD8CFBD8C73 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ExponentialBackOff_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExponentialBackOff_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +41,12 @@
 		607FACE51AFB9204008FA782 /* ExponentialBackOff_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExponentialBackOff_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		88621198889624F6F232DB70 /* Pods-ExponentialBackOff_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		81E6B6851271202C21686668 /* Pods-ExponentialBackOff_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A40A0B7595499A2CF401A235 /* ExponentialBackOff.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ExponentialBackOff.podspec; path = ../ExponentialBackOff.podspec; sourceTree = "<group>"; };
-		B7F1D0E3B0C2B9712B631B3E /* Pods-ExponentialBackOff_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BB1A8A3A3B0D1D5FD16BD8D7 /* Pods-ExponentialBackOff_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		ACB0F4AA07816F3E99EC5873 /* Pods_ExponentialBackOff_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD79422C28EC10F9117C27B0 /* Pods_ExponentialBackOff_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9006178D41E6172EC9470A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E084C08100745A08F480CBE9 /* Pods_ExponentialBackOff_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExponentialBackOff_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D016760811EDD5DE22D50FCC /* Pods-ExponentialBackOff_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExponentialBackOff_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B5EEB6A62969F25349DEA7 /* Pods_ExponentialBackOff_Example.framework in Frameworks */,
+				30AC8C3ED7B5307EC80B6D0E /* Pods_ExponentialBackOff_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +62,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5A65A3BF07CDEC61DC5421 /* Pods_ExponentialBackOff_Tests.framework in Frameworks */,
+				41262BAF7858F7C6A8DF765B /* Pods_ExponentialBackOff_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29E282A2504BE8682E48FDDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81E6B6851271202C21686668 /* Pods-ExponentialBackOff_Example.debug.xcconfig */,
+				D016760811EDD5DE22D50FCC /* Pods-ExponentialBackOff_Example.release.xcconfig */,
+				1E442743CE309CD8CFBD8C73 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */,
+				1AA2879F578BE4AD8AB3BAEC /* Pods-ExponentialBackOff_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +87,8 @@
 				607FACD21AFB9204008FA782 /* Example for ExponentialBackOff */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				A5E60D9A652FBC6D5F0113EF /* Pods */,
-				7A88D7D66682F2A71029C8AF /* Frameworks */,
+				29E282A2504BE8682E48FDDE /* Pods */,
+				D0D1BAB1AD0687EB5130AC60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,24 +150,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		7A88D7D66682F2A71029C8AF /* Frameworks */ = {
+		D0D1BAB1AD0687EB5130AC60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E084C08100745A08F480CBE9 /* Pods_ExponentialBackOff_Example.framework */,
-				60339FF3B3354ACCA7806427 /* Pods_ExponentialBackOff_Tests.framework */,
+				ACB0F4AA07816F3E99EC5873 /* Pods_ExponentialBackOff_Example.framework */,
+				CD79422C28EC10F9117C27B0 /* Pods_ExponentialBackOff_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A5E60D9A652FBC6D5F0113EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				88621198889624F6F232DB70 /* Pods-ExponentialBackOff_Example.debug.xcconfig */,
-				B7F1D0E3B0C2B9712B631B3E /* Pods-ExponentialBackOff_Example.release.xcconfig */,
-				266C716E4FF1758949DAE883 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */,
-				BB1A8A3A3B0D1D5FD16BD8D7 /* Pods-ExponentialBackOff_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ExponentialBackOff_Example" */;
 			buildPhases = (
-				D25DF1347DE273B95CCE9FC6 /* Check Pods Manifest.lock */,
+				A6B769CBED01BD17156F43DC /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				66CBCA0AD1ACD7FBE25CB88D /* Embed Pods Frameworks */,
-				2B75F9901D8E9535E4C6B294 /* Copy Pods Resources */,
+				F298F5289BF98DBD31F659ED /* [CP] Embed Pods Frameworks */,
+				D932223E6D396DA8F92B89FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "ExponentialBackOff_Tests" */;
 			buildPhases = (
-				E540C55555E90D0E2A9E3BC7 /* Check Pods Manifest.lock */,
+				78834A05EAA4CE0BC576BA29 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				B95ABDF30C6A55332444B3CF /* Embed Pods Frameworks */,
-				309954EEA9BA6E7D88EB1DFC /* Copy Pods Resources */,
+				01D5D90C9B808713AF3330DE /* [CP] Embed Pods Frameworks */,
+				6D00C12B95A2DF1F9C22E91F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,14 +210,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -262,59 +264,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B75F9901D8E9535E4C6B294 /* Copy Pods Resources */ = {
+		01D5D90C9B808713AF3330DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		309954EEA9BA6E7D88EB1DFC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66CBCA0AD1ACD7FBE25CB88D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B95ABDF30C6A55332444B3CF /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,34 +279,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D25DF1347DE273B95CCE9FC6 /* Check Pods Manifest.lock */ = {
+		6D00C12B95A2DF1F9C22E91F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Tests/Pods-ExponentialBackOff_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E540C55555E90D0E2A9E3BC7 /* Check Pods Manifest.lock */ = {
+		78834A05EAA4CE0BC576BA29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A6B769CBED01BD17156F43DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D932223E6D396DA8F92B89FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F298F5289BF98DBD31F659ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExponentialBackOff_Example/Pods-ExponentialBackOff_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -415,8 +417,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -460,8 +464,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -480,40 +486,48 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88621198889624F6F232DB70 /* Pods-ExponentialBackOff_Example.debug.xcconfig */;
+			baseConfigurationReference = 81E6B6851271202C21686668 /* Pods-ExponentialBackOff_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExponentialBackOff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7F1D0E3B0C2B9712B631B3E /* Pods-ExponentialBackOff_Example.release.xcconfig */;
+			baseConfigurationReference = D016760811EDD5DE22D50FCC /* Pods-ExponentialBackOff_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExponentialBackOff/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 266C716E4FF1758949DAE883 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */;
+			baseConfigurationReference = 1E442743CE309CD8CFBD8C73 /* Pods-ExponentialBackOff_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -527,14 +541,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExponentialBackOff_Example.app/ExponentialBackOff_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB1A8A3A3B0D1D5FD16BD8D7 /* Pods-ExponentialBackOff_Tests.release.xcconfig */;
+			baseConfigurationReference = 1AA2879F578BE4AD8AB3BAEC /* Pods-ExponentialBackOff_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -544,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExponentialBackOff_Example.app/ExponentialBackOff_Example";
 			};
 			name = Release;

@@ -9,7 +9,7 @@ class TableOfContentsSpec: QuickSpec {
 
 	class TestBackOff: BackOff {
 
-		func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) {
+		func run(_ lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) {
 			Async.background {
 				var number: Int = 0
 				for i in 1 ... 10000 {
@@ -20,9 +20,9 @@ class TableOfContentsSpec: QuickSpec {
 					print("lastIntervallMillis: \(lastIntervallMillis)")
 					print("elapsedTimeMillis: \(elapsedTimeMillis)")
 					if number != 100 {
-						codeToRunAfterFinishedExecuting(success: false)
+						_ = codeToRunAfterFinishedExecuting(false)
 					} else {
-						codeToRunAfterFinishedExecuting(success: true)
+						_ = codeToRunAfterFinishedExecuting(true)
 					}
 				}
 			}
@@ -87,7 +87,7 @@ class TableOfContentsSpec: QuickSpec {
 			it("Should back off the code exponentially") {
 				self.exponentialBackOff.algorithm(TestBackOff())
 
-				expect(self.exponentialBackOff.currentState) == BackOffState.Running
+				expect(self.exponentialBackOff.currentState) == BackOffState.running
 
 				// expect(self.exponentialBackOff.currentState).toEventually(BackOffState.Failed)
 			}

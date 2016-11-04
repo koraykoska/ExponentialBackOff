@@ -48,7 +48,7 @@ public protocol BackOff {
 	 - parameter elapsedTimeMillis: The total time waited already. If this exceeds `maxElapsedTimeMillis` the algorithm stops executing.
 	 - parameter codeToRunAfterFinishedExecuting: Call after your code finished executing and you know the result
 	 */
-	func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) -> Void
+	func run(_ lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void
 }
 
 public struct BackOffProperties {

@@ -13,20 +13,20 @@ public enum BackOffState {
 	/**
 	 Indicates that the BackOff has not succeeded yet but is still valid and running
 	 */
-	case Running
+	case running
 
 	/**
 	 The BackOff has not started yet
 	 */
-	case Stopped
+	case stopped
 
 	/**
 	 The BackOff finished proccessing because of the Timeout but never returned true
 	 */
-	case Failed
+	case failed
 
 	/**
 	 The BackOff returned true and stopped proccessing
 	 */
-	case Succeeded
+	case succeeded
 }

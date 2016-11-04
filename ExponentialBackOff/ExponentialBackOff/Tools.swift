@@ -10,7 +10,7 @@ import Foundation
 
 struct Tools {
 
-	static func millisToSeconds(millis: Double) -> Double {
+	static func millisToSeconds(_ millis: Double) -> Double {
 		return millis / 1000
 	}
 }
