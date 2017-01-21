@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6BF1731E33C5390096F26F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E6BF1721E33C5390096F26F /* Info.plist */; };
 		0EF4AEC01C8A59550021C8DC /* ExponentialBackOff.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF4AEBF1C8A59550021C8DC /* ExponentialBackOff.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EF4AECC1C8A59EA0021C8DC /* BackOff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AEC71C8A59EA0021C8DC /* BackOff.swift */; };
 		0EF4AECD1C8A59EA0021C8DC /* BackOffAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4AEC81C8A59EA0021C8DC /* BackOffAlgorithm.swift */; };
@@ -19,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E6BF1721E33C5390096F26F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EF4AEBC1C8A59550021C8DC /* ExponentialBackOff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExponentialBackOff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF4AEBF1C8A59550021C8DC /* ExponentialBackOff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExponentialBackOff.h; sourceTree = "<group>"; };
-		0EF4AEC11C8A59550021C8DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EF4AEC71C8A59EA0021C8DC /* BackOff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackOff.swift; sourceTree = "<group>"; };
 		0EF4AEC81C8A59EA0021C8DC /* BackOffAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackOffAlgorithm.swift; sourceTree = "<group>"; };
 		0EF4AEC91C8A59EA0021C8DC /* BackOffState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackOffState.swift; sourceTree = "<group>"; };
@@ -75,7 +76,7 @@
 				0EF4AECB1C8A59EA0021C8DC /* ExponentialBackOffInstance.swift */,
 				0EF4AED11C8A5FF60021C8DC /* Random.swift */,
 				0EF4AED31C8A61540021C8DC /* Tools.swift */,
-				0EF4AEC11C8A59550021C8DC /* Info.plist */,
+				0E6BF1721E33C5390096F26F /* Info.plist */,
 			);
 			path = ExponentialBackOff;
 			sourceTree = "<group>";
@@ -168,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6BF1731E33C5390096F26F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
