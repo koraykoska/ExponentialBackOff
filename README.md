@@ -57,7 +57,7 @@ let builder = ExponentialBackOffInstance.Builder()
 let exponentialBackOff = ExponentialBackOffInstance(builder: builder)
 
 ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
-    (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+    (lastIntervallMillis, elapsedTimeMillis, completion) in
     
     print("Last interval: \(lastIntervallMillis)")
     print("Elapsed time overall: \(elapsedTimeMillis)")
@@ -66,10 +66,10 @@ ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
     
     if randomNumber == 28 {
         print("Success! Terminating the back-off instance.")
-        codeToRunAfterFinishedExecuting(success: true)
+        completion(success: true)
     } else {
         print("Failed, retrying after some time.")
-        codeToRunAfterFinishedExecuting(success: false)
+        completion(success: false)
     }
     
 	 }
@@ -94,7 +94,7 @@ builder.multiplier = 2.0
 let exponentialBackOff = ExponentialBackOffInstance(builder: builder)
 
 ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
-    (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+    (lastIntervallMillis, elapsedTimeMillis, completion) in
     
     // Last interval millis is never greater than maxIntervalMillis
     print("Last interval: \(lastIntervallMillis)")
@@ -107,10 +107,10 @@ ExponentialBackOff.sharedInstance.runGeneralBackOff(exponentialBackOff) {
     
     if randomNumber == 97 {
         print("Success! Terminating the back-off instance.")
-        codeToRunAfterFinishedExecuting(success: true)
+        completion(success: true)
     } else {
         print("Failed, retrying after some time.")
-        codeToRunAfterFinishedExecuting(success: false)
+        completion(success: false)
     }
     
 }

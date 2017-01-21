@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
 	/*class TestBackOff: BackOff {
 
-	 func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: (success: Bool) -> BackOffState) {
+	 func run(lastIntervallMillis: Int, elapsedTimeMillis: Int, completion: (success: Bool) -> BackOffState) {
 	 Async.background {
 	 var number: Int = 0
 	 for i in 1 ... 10000 {
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
 	 print("lastIntervallMillis: \(lastIntervallMillis)")
 	 print("elapsedTimeMillis: \(elapsedTimeMillis)")
 	 if number != 100 {
-	 codeToRunAfterFinishedExecuting(success: false)
+	 completion(success: false)
 	 } else {
-	 codeToRunAfterFinishedExecuting(success: true)
+	 completion(success: true)
 	 }
 	 }
 	 }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 	 }*/
 
 	// Define the closure which will be passed to the exponential backoff algorithm
-	let code: (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void = { (lastIntervallMillis, elapsedTimeMillis, codeToRunAfterFinishedExecuting) in
+	let code: (_ lastIntervallMillis: Int, _ elapsedTimeMillis: Int, _ completion: @escaping (_ success: Bool) -> BackOffState) -> Void = { (lastIntervallMillis, elapsedTimeMillis, completion) in
 		Async.background {
 			var number: Int = 0
             for i in 1 ... 10000 {
@@ -48,9 +48,9 @@ class ViewController: UIViewController {
 				print("lastIntervallMillis: \(lastIntervallMillis)")
 				print("elapsedTimeMillis: \(elapsedTimeMillis)")
 				if number != 100 {
-					_ = codeToRunAfterFinishedExecuting(false)
+					_ = completion(false)
 				} else {
-                    _ = codeToRunAfterFinishedExecuting(true)
+                    _ = completion(true)
 				}
 			}
 		}

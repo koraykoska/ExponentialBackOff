@@ -17,38 +17,38 @@ public protocol BackOff {
 	 Populate this method with your code which should be run
 	 repeatedly until it succeeds or until `MaxElapsedTimeMillis` exceeds
 
-	 codeToRunAfterFinishedExecuting
+	 completion
 	 ---
 
-	 If you implement this protocol you must make sure to call `codeToRunAfterFinishedExecuting(success:)` in order for the ExponentialBackOff to work properly.
+	 If you implement this protocol you must make sure to call `completion(success:)` in order for the ExponentialBackOff to work properly.
 
 	 This must be done like this because most likely you want to call Networking functions which are mostly called asynchronously with passing a closure as the _result action_.
 
-	 Because you can't know what is happening while this asynchronous task, you should make sure to implement `codeToRunAfterFinishedExecuting(result:)` into the _result closure_.
+	 Because you can't know what is happening while this asynchronous task, you should make sure to implement `completion(result:)` into the _result closure_.
 
 	 For example with Reachability it could look a little bit like this:
 
 	 ```
 	 reachability.whenReachable = { reachability in
 	 if reachability.isReachableViaWiFi() {
-	 codeToRunAfterFinishedExecuting(success: true)
+	 completion(success: true)
 
 	 // Alamofire.request...
 	 // ...
 	 }
 
 	 reachability.whenUnreachable = { reachability in
-	 codeToRunAfterFinishedExecuting(success: false)
+	 completion(success: false)
 	 }
 	 ```
 
-	 With `codeToRunAfterFinishedExecuting(success:)` ExponentialBackOff knows whether it should run another attempt or not. If you don't implement this, the BackOff won't work.
+	 With `completion(success:)` ExponentialBackOff knows whether it should run another attempt or not. If you don't implement this, the BackOff won't work.
 
 	 - parameter lastIntervallMillis: You can read this Variable if you want to know how long the Executor waited before running this attempt (in milliseconds)
 	 - parameter elapsedTimeMillis: The total time waited already. If this exceeds `maxElapsedTimeMillis` the algorithm stops executing.
-	 - parameter codeToRunAfterFinishedExecuting: Call after your code finished executing and you know the result
+	 - parameter completion: Call after your code finished executing and you know the result
 	 */
-	func run(_ lastIntervallMillis: Int, elapsedTimeMillis: Int, codeToRunAfterFinishedExecuting: @escaping (_ success: Bool) -> BackOffState) -> Void
+	func run(_ lastIntervallMillis: Int, elapsedTimeMillis: Int, completion: @escaping (_ success: Bool) -> BackOffState) -> Void
 }
 
 public struct BackOffProperties {

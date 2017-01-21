@@ -7,7 +7,7 @@ target 'ExponentialBackOff_Example' do
   target 'ExponentialBackOff_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 0.10'
+    pod 'Quick', '~> 1.0'
     pod 'Nimble', '~> 5.1'
   end
 end

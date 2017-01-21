@@ -71,16 +71,18 @@ open class ExponentialBackOffInstance: BackOffAlgorithm {
 
 	open fileprivate(set) var currentState: BackOffState = BackOffState.stopped
 
-	open func algorithm(_ backOff: BackOff) -> BackOffAlgorithm {
+    open func algorithm(_ backOff: BackOff, completion: ((_ state: BackOffState) -> Void)?) -> BackOffAlgorithm {
 		self.savedBackOff = backOff
 		attempts += 1
 
 		if attempts != 1 && currentState == .stopped {
+            completion?(currentState)
 			return self
 		}
 
 		if elapsedTimeMillis >= Double(maxElapsedTimeMillis) {
 			self.currentState = .failed
+            completion?(currentState)
 			return self
 		}
 
@@ -108,15 +110,16 @@ open class ExponentialBackOffInstance: BackOffAlgorithm {
 		// Set state to .Running
 		currentState = .running
 
-		Async.background(after: Tools.millisToSeconds(currentDelay)) {
+		Async.main(after: Tools.millisToSeconds(currentDelay)) {
 			backOff.run(Int(currentDelay), elapsedTimeMillis: Int(self.elapsedTimeMillis))
 			{ success in
 				if success == true {
 					self.currentState = BackOffState.succeeded
+                    completion?(self.currentState)
 					return self.currentState
 				} else {
 					Async.background {
-						self.algorithm(backOff)
+						self.algorithm(backOff, completion: completion)
 					}
 					return self.currentState
 				}
@@ -156,34 +159,31 @@ open class ExponentialBackOffInstance: BackOffAlgorithm {
 		/**
 		 The initial interval value in milliseconds, defaulted to BackOffProperties.DEFAULT_INITIAL_INTERVAL_MILLIS.
 		 */
-		open var initialIntervalMillis: Int = BackOffProperties.DEFAULT_INITIAL_INTERVAL_MILLIS
+		open var initialIntervalMillis: Int
 
 		/**
 		 The maximum elapsed time after which the BackOff stops executing in milliseconds, defaulted to BackOffProperties.DEFAULT_MAX_ELAPSED_TIME_MILLIS.
 		 */
-		open var maxElapsedTimeMillis: Int = BackOffProperties.DEFAULT_MAX_ELAPSED_TIME_MILLIS
+		open var maxElapsedTimeMillis: Int
 
 		/**
 		 The maximum back off time in milliseconds, defaulted to BackOffProperties.DEFAULT_MAX_INTERVAL_MILLIS.
 		 */
-		open var maxIntervalMillis: Int = BackOffProperties.DEFAULT_MAX_INTERVAL_MILLIS
+		open var maxIntervalMillis: Int
 
 		/**
 		 The multiplier value, defaulted to BackOffProperties.DEFAULT_MULTIPLIER.
 		 */
-		open var multiplier: Double = BackOffProperties.DEFAULT_MULTIPLIER
+		open var multiplier: Double
 
 		/**
 		 The default randomization factor, defaulted to BackOffProperties.DEFAULT_RANDOMIZATION_FACTOR.
 		 */
-		open var randomizationFactor: Double = BackOffProperties.DEFAULT_RANDOMIZATION_FACTOR
+		open var randomizationFactor: Double
 
 		// MARK: - Initializers
 
-		public init() {
-		}
-
-		public init(initialIntervalMillis: Int, maxElapsedTimeMillis: Int, maxIntervalMillis: Int, multiplier: Double, randomizationFactor: Double) {
+		public init(initialIntervalMillis: Int = BackOffProperties.DEFAULT_INITIAL_INTERVAL_MILLIS, maxElapsedTimeMillis: Int = BackOffProperties.DEFAULT_MAX_ELAPSED_TIME_MILLIS, maxIntervalMillis: Int = BackOffProperties.DEFAULT_MAX_INTERVAL_MILLIS, multiplier: Double = BackOffProperties.DEFAULT_MULTIPLIER, randomizationFactor: Double = BackOffProperties.DEFAULT_RANDOMIZATION_FACTOR) {
 			self.initialIntervalMillis = initialIntervalMillis
 			self.maxElapsedTimeMillis = maxElapsedTimeMillis
 			self.maxIntervalMillis = maxIntervalMillis
