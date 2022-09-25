@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ExponentialBackOff"
-  s.version          = "1.1.1"
+  s.version          = "1.2.0"
   s.summary          = "A framework which implements the ExponentialBackOff algorithm which is usefull for Networking."
 
 # This description is used to generate tags and improve search results.
@@ -47,5 +47,6 @@ You also have the option to implement your own algorithm without worrying about 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'AsyncSwift', :git => 'https://github.com/duemunk/Async.git'
+  s.dependency 'AsyncSwift'
+  s.swift_version = '5.0'
 end
