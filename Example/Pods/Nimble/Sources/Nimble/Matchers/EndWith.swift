@@ -1,73 +1,65 @@
 import Foundation
 
-
 /// A Nimble matcher that succeeds when the actual sequence's last element
 /// is equal to the expected value.
-public func endWith<S: Sequence, T: Equatable>(_ endingElement: T) -> NonNilMatcherFunc<S>
-    where S.Iterator.Element == T
-{
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "end with <\(endingElement)>"
+public func endWith<S: Sequence>(_ endingElement: S.Element) -> Predicate<S> where S.Element: Equatable {
+    return Predicate.simple("end with <\(endingElement)>") { actualExpression in
+        guard let actualValue = try actualExpression.evaluate() else { return .fail }
 
-        if let actualValue = try actualExpression.evaluate() {
-            var actualGenerator = actualValue.makeIterator()
-            var lastItem: T?
-            var item: T?
-            repeat {
-                lastItem = item
-                item = actualGenerator.next()
-            } while(item != nil)
-            
-            return lastItem == endingElement
-        }
-        return false
+        var actualGenerator = actualValue.makeIterator()
+        var lastItem: S.Element?
+        var item: S.Element?
+        repeat {
+            lastItem = item
+            item = actualGenerator.next()
+        } while(item != nil)
+
+        return PredicateStatus(bool: lastItem == endingElement)
     }
 }
 
 /// A Nimble matcher that succeeds when the actual collection's last element
 /// is equal to the expected object.
-public func endWith(_ endingElement: Any) -> NonNilMatcherFunc<NMBOrderedCollection> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "end with <\(endingElement)>"
-        guard let collection = try actualExpression.evaluate() else { return false }
-        guard collection.count > 0 else { return false }
-        #if os(Linux)
-            guard let collectionValue = collection.object(at: collection.count - 1) as? NSObject else {
-                return false
-            }
-        #else
+public func endWith(_ endingElement: Any) -> Predicate<NMBOrderedCollection> {
+    return Predicate.simple("end with <\(endingElement)>") { actualExpression in
+        guard let collection = try actualExpression.evaluate() else { return .fail }
+
+        guard collection.count > 0 else { return PredicateStatus(bool: false) }
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
             let collectionValue = collection.object(at: collection.count - 1) as AnyObject
+        #else
+            guard let collectionValue = collection.object(at: collection.count - 1) as? NSObject else {
+                return .fail
+            }
         #endif
 
-        return collectionValue.isEqual(endingElement)
+        return PredicateStatus(bool: collectionValue.isEqual(endingElement))
     }
 }
-
 
 /// A Nimble matcher that succeeds when the actual string contains the expected substring
 /// where the expected substring's location is the actual string's length minus the
 /// expected substring's length.
-public func endWith(_ endingSubstring: String) -> NonNilMatcherFunc<String> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "end with <\(endingSubstring)>"
-        if let collection = try actualExpression.evaluate() {
-            return collection.hasSuffix(endingSubstring)
-        }
-        return false
+public func endWith(_ endingSubstring: String) -> Predicate<String> {
+    return Predicate.simple("end with <\(endingSubstring)>") { actualExpression in
+        guard let collection = try actualExpression.evaluate() else { return .fail }
+
+        return PredicateStatus(bool: collection.hasSuffix(endingSubstring))
     }
 }
 
-#if _runtime(_ObjC)
-extension NMBObjCMatcher {
-    public class func endWithMatcher(_ expected: Any) -> NMBObjCMatcher {
-        return NMBObjCMatcher(canMatchNil: false) { actualExpression, failureMessage in
-            let actual = try! actualExpression.evaluate()
-            if let _ = actual as? String {
+#if canImport(Darwin)
+extension NMBPredicate {
+    @objc public class func endWithMatcher(_ expected: Any) -> NMBPredicate {
+        return NMBPredicate { actualExpression in
+            let actual = try actualExpression.evaluate()
+            if actual is String {
                 let expr = actualExpression.cast { $0 as? String }
-                return try! endWith(expected as! String).matches(expr, failureMessage: failureMessage)
+                // swiftlint:disable:next force_cast
+                return try endWith(expected as! String).satisfies(expr).toObjectiveC()
             } else {
                 let expr = actualExpression.cast { $0 as? NMBOrderedCollection }
-                return try! endWith(expected).matches(expr, failureMessage: failureMessage)
+                return try endWith(expected).satisfies(expr).toObjectiveC()
             }
         }
     }

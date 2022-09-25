@@ -9,7 +9,7 @@ class TableOfContentsSpec: QuickSpec {
 
 	var exponentialBackOff: ExponentialBackOffInstance!
 
-    var timeOut: TimeInterval!
+    var timeOut: DispatchTimeInterval!
 
 	override func spec() {
 		beforeEach {
@@ -17,8 +17,9 @@ class TableOfContentsSpec: QuickSpec {
 			builder.maxElapsedTimeMillis = 1500
             builder.maxIntervalMillis = 500
 			self.exponentialBackOff = ExponentialBackOffInstance(builder: builder)
-
-            self.timeOut = (TimeInterval(builder.maxIntervalMillis) + TimeInterval(builder.maxIntervalMillis)) * 2
+            let timeInterval = (TimeInterval(builder.maxIntervalMillis) + TimeInterval(builder.maxIntervalMillis)) * 2
+            let roundedTimeInterval = Int(timeInterval.rounded())
+            self.timeOut = DispatchTimeInterval.milliseconds(roundedTimeInterval)
 		}
 
 		describe("Testing the exponential backoff algorithm") {

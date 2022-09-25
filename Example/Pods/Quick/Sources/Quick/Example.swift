@@ -1,12 +1,20 @@
 import Foundation
+import XCTest
 
-private var numberOfExamplesRun = 0
+#if canImport(Darwin)
+// swiftlint:disable type_name
+@objcMembers
+public class _ExampleBase: NSObject {}
+#else
+public class _ExampleBase: NSObject {}
+// swiftlint:enable type_name
+#endif
 
 /**
     Examples, defined with the `it` function, use assertions to
     demonstrate how code should behave. These are like "tests" in XCTest.
 */
-final public class Example: NSObject {
+final public class Example: _ExampleBase {
     /**
         A boolean indicating whether the example is a shared example;
         i.e.: whether it is an example defined with `itBehavesLike`.
@@ -23,10 +31,10 @@ final public class Example: NSObject {
     weak internal var group: ExampleGroup?
 
     private let internalDescription: String
-    private let closure: () -> ()
+    private let closure: () throws -> Void
     private let flags: FilterFlags
 
-    internal init(description: String, callsite: Callsite, flags: FilterFlags, closure: @escaping () -> ()) {
+    internal init(description: String, callsite: Callsite, flags: FilterFlags, closure: @escaping () throws -> Void) {
         self.internalDescription = description
         self.closure = closure
         self.callsite = callsite
@@ -54,35 +62,68 @@ final public class Example: NSObject {
         Executes the example closure, as well as all before and after
         closures defined in the its surrounding example groups.
     */
-    public func run() {
+    public func run() { // swiftlint:disable:this function_body_length
         let world = World.sharedWorld
 
-        if numberOfExamplesRun == 0 {
+        if world.numberOfExamplesRun == 0 {
             world.suiteHooks.executeBefores()
         }
 
-        let exampleMetadata = ExampleMetadata(example: self, exampleIndex: numberOfExamplesRun)
+        let exampleMetadata = ExampleMetadata(example: self, exampleIndex: world.numberOfExamplesRun)
         world.currentExampleMetadata = exampleMetadata
+        defer {
+            world.currentExampleMetadata = nil
+        }
 
-        world.exampleHooks.executeBefores(exampleMetadata)
         group!.phase = .beforesExecuting
-        for before in group!.befores {
-            before(exampleMetadata)
-        }
-        group!.phase = .beforesFinished
 
-        closure()
+        let runExample = { [closure, name, callsite] in
+            self.group!.phase = .beforesFinished
 
-        group!.phase = .aftersExecuting
-        for after in group!.afters {
-            after(exampleMetadata)
+            do {
+                try closure()
+            } catch {
+                let description = "Test \(name) threw unexpected error: \(error.localizedDescription)"
+                #if SWIFT_PACKAGE
+                let file = callsite.file.description
+                #else
+                let file = callsite.file
+                #endif
+
+                // XCTIssue is unavailable (not implemented yet) on swift-corelibs-xctest (for non-Apple platforms)
+                #if canImport(Darwin)
+                let location = XCTSourceCodeLocation(filePath: file, lineNumber: Int(callsite.line))
+                let sourceCodeContext = XCTSourceCodeContext(location: location)
+                let issue = XCTIssue(
+                    type: .thrownError,
+                    compactDescription: description,
+                    sourceCodeContext: sourceCodeContext
+                )
+                QuickSpec.current.record(issue)
+                #else
+                QuickSpec.current.recordFailure(
+                    withDescription: description,
+                    inFile: file,
+                    atLine: Int(callsite.line),
+                    expected: false
+                )
+                #endif
+            }
+
+            self.group!.phase = .aftersExecuting
         }
+
+        let allWrappers = group!.wrappers + world.exampleHooks.wrappers
+        let wrappedExample = allWrappers.reduce(runExample) { closure, wrapper in
+            return { wrapper(exampleMetadata, closure) }
+        }
+        wrappedExample()
+
         group!.phase = .aftersFinished
-        world.exampleHooks.executeAfters(exampleMetadata)
 
-        numberOfExamplesRun += 1
+        world.numberOfExamplesRun += 1
 
-        if !world.isRunningAdditionalSuites && numberOfExamplesRun >= world.includedExampleCount {
+        if !world.isRunningAdditionalSuites && world.numberOfExamplesRun >= world.cachedIncludedExampleCount {
             world.suiteHooks.executeAfters()
         }
     }
@@ -102,10 +143,12 @@ final public class Example: NSObject {
     }
 }
 
-/**
-    Returns a boolean indicating whether two Example objects are equal.
-    If two examples are defined at the exact same callsite, they must be equal.
-*/
-public func == (lhs: Example, rhs: Example) -> Bool {
-    return lhs.callsite == rhs.callsite
+extension Example {
+    /**
+        Returns a boolean indicating whether two Example objects are equal.
+        If two examples are defined at the exact same callsite, they must be equal.
+    */
+    @nonobjc public static func == (lhs: Example, rhs: Example) -> Bool {
+        return lhs.callsite == rhs.callsite
+    }
 }

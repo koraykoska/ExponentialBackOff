@@ -1,25 +1,38 @@
 PODS:
-  - AsyncSwift (2.0.1)
-  - ExponentialBackOff (1.1.0):
-    - AsyncSwift (~> 2.0)
-  - Nimble (5.1.1)
-  - Quick (1.0.0)
+  - AsyncSwift (2.1.0)
+  - ExponentialBackOff (1.2.0):
+    - AsyncSwift
+  - Nimble (10.0.0)
+  - Quick (5.0.1)
 
 DEPENDENCIES:
+  - AsyncSwift (from `https://github.com/duemunk/Async.git`)
   - ExponentialBackOff (from `../`)
-  - Nimble (~> 5.1)
-  - Quick (~> 1.0)
+  - Nimble (~> 10.0)
+  - Quick (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
 
 EXTERNAL SOURCES:
+  AsyncSwift:
+    :git: https://github.com/duemunk/Async.git
   ExponentialBackOff:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  AsyncSwift:
+    :commit: 5d488316afdcecd4fb25f8ae04f21f8f4c54ca02
+    :git: https://github.com/duemunk/Async.git
+
 SPEC CHECKSUMS:
-  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
-  ExponentialBackOff: 6049b621d4f0f78b89704fd5da8d4ae0df857b2e
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  AsyncSwift: 5fcad486b2fab40dc37e9b0418903375a63a5d3c
+  ExponentialBackOff: 35accb5f558ebc1d7e4397877e1b421080581fe6
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
+  Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
 
-PODFILE CHECKSUM: 7240857412060b062921d8023070e60902ea3b21
+PODFILE CHECKSUM: 69b3485889e3fe3e6a422638552e95b0e6972977
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.11.3

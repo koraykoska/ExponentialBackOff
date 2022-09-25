@@ -1,63 +1,55 @@
 import Foundation
 
-
 /// A Nimble matcher that succeeds when the actual sequence's first element
 /// is equal to the expected value.
-public func beginWith<S: Sequence, T: Equatable>(_ startingElement: T) -> NonNilMatcherFunc<S>
-    where S.Iterator.Element == T
-{
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "begin with <\(startingElement)>"
-        if let actualValue = try actualExpression.evaluate() {
-            var actualGenerator = actualValue.makeIterator()
-            return actualGenerator.next() == startingElement
-        }
-        return false
+public func beginWith<S: Sequence>(_ startingElement: S.Element) -> Predicate<S> where S.Element: Equatable {
+    return Predicate.simple("begin with <\(startingElement)>") { actualExpression in
+        guard let actualValue = try actualExpression.evaluate() else { return .fail }
+
+        var actualGenerator = actualValue.makeIterator()
+        return PredicateStatus(bool: actualGenerator.next() == startingElement)
     }
 }
 
 /// A Nimble matcher that succeeds when the actual collection's first element
 /// is equal to the expected object.
-public func beginWith(_ startingElement: Any) -> NonNilMatcherFunc<NMBOrderedCollection> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "begin with <\(startingElement)>"
-        guard let collection = try actualExpression.evaluate() else { return false }
-        guard collection.count > 0 else { return false }
-        #if os(Linux)
-            guard let collectionValue = collection.object(at: 0) as? NSObject else {
-                return false
-            }
-        #else
+public func beginWith(_ startingElement: Any) -> Predicate<NMBOrderedCollection> {
+    return Predicate.simple("begin with <\(startingElement)>") { actualExpression in
+        guard let collection = try actualExpression.evaluate() else { return .fail }
+        guard collection.count > 0 else { return .doesNotMatch }
+        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
             let collectionValue = collection.object(at: 0) as AnyObject
+        #else
+            guard let collectionValue = collection.object(at: 0) as? NSObject else {
+                return .fail
+            }
         #endif
-        return collectionValue.isEqual(startingElement)
+        return PredicateStatus(bool: collectionValue.isEqual(startingElement))
     }
 }
 
 /// A Nimble matcher that succeeds when the actual string contains expected substring
 /// where the expected substring's location is zero.
-public func beginWith(_ startingSubstring: String) -> NonNilMatcherFunc<String> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "begin with <\(startingSubstring)>"
-        if let actual = try actualExpression.evaluate() {
-            let range = actual.range(of: startingSubstring)
-            return range != nil && range!.lowerBound == actual.startIndex
-        }
-        return false
+public func beginWith(_ startingSubstring: String) -> Predicate<String> {
+    return Predicate.simple("begin with <\(startingSubstring)>") { actualExpression in
+        guard let actual = try actualExpression.evaluate() else { return .fail }
+
+        return PredicateStatus(bool: actual.hasPrefix(startingSubstring))
     }
 }
 
-#if _runtime(_ObjC)
-extension NMBObjCMatcher {
-    public class func beginWithMatcher(_ expected: Any) -> NMBObjCMatcher {
-        return NMBObjCMatcher(canMatchNil: false) { actualExpression, failureMessage in
-            let actual = try! actualExpression.evaluate()
-            if let _ = actual as? String {
+#if canImport(Darwin)
+extension NMBPredicate {
+    @objc public class func beginWithMatcher(_ expected: Any) -> NMBPredicate {
+        return NMBPredicate { actualExpression in
+            let actual = try actualExpression.evaluate()
+            if actual is String {
                 let expr = actualExpression.cast { $0 as? String }
-                return try! beginWith(expected as! String).matches(expr, failureMessage: failureMessage)
+                // swiftlint:disable:next force_cast
+                return try beginWith(expected as! String).satisfies(expr).toObjectiveC()
             } else {
                 let expr = actualExpression.cast { $0 as? NMBOrderedCollection }
-                return try! beginWith(expected).matches(expr, failureMessage: failureMessage)
+                return try beginWith(expected).satisfies(expr).toObjectiveC()
             }
         }
     }

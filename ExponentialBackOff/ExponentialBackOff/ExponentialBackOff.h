@@ -6,7 +6,7 @@
 //  Copyright © 2016 KW Technologies. All rights reserved.
 //
 
-//#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for ExponentialBackOff.
 FOUNDATION_EXPORT double ExponentialBackOffVersionNumber;

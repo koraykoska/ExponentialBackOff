@@ -1,30 +1,23 @@
-import Foundation
-
 /// A Nimble matcher that succeeds when the actual string satisfies the regular expression
 /// described by the expected string.
-public func match(_ expectedValue: String?) -> NonNilMatcherFunc<String> {
-    return NonNilMatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "match <\(stringify(expectedValue))>"
-        
-        if let actual = try actualExpression.evaluate() {
-            if let regexp = expectedValue {
-                return actual.range(of: regexp, options: .regularExpression) != nil
-            }
-        }
+public func match(_ expectedValue: String?) -> Predicate<String> {
+    return Predicate.simple("match <\(stringify(expectedValue))>") { actualExpression in
+        guard let actual = try actualExpression.evaluate(), let regexp = expectedValue else { return .fail }
 
-        return false
+        let bool = actual.range(of: regexp, options: .regularExpression) != nil
+        return PredicateStatus(bool: bool)
     }
 }
 
-#if _runtime(_ObjC)
+#if canImport(Darwin)
+import class Foundation.NSString
 
-extension NMBObjCMatcher {
-    public class func matchMatcher(_ expected: NSString) -> NMBMatcher {
-        return NMBObjCMatcher(canMatchNil: false) { actualExpression, failureMessage in
+extension NMBPredicate {
+    @objc public class func matchMatcher(_ expected: NSString) -> NMBPredicate {
+        return NMBPredicate { actualExpression in
             let actual = actualExpression.cast { $0 as? String }
-            return try! match(expected.description).matches(actual, failureMessage: failureMessage)
+            return try match(expected.description).satisfies(actual).toObjectiveC()
         }
     }
 }
-
 #endif

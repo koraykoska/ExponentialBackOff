@@ -1,12 +1,21 @@
 PODS:
-  - AsyncSwift (2.0.1)
+  - AsyncSwift (2.1.0)
 
 DEPENDENCIES:
-  - AsyncSwift (~> 2.0)
+  - AsyncSwift (from `https://github.com/duemunk/Async.git`)
+
+EXTERNAL SOURCES:
+  AsyncSwift:
+    :git: https://github.com/duemunk/Async.git
+
+CHECKOUT OPTIONS:
+  AsyncSwift:
+    :commit: 5d488316afdcecd4fb25f8ae04f21f8f4c54ca02
+    :git: https://github.com/duemunk/Async.git
 
 SPEC CHECKSUMS:
-  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  AsyncSwift: 5fcad486b2fab40dc37e9b0418903375a63a5d3c
 
-PODFILE CHECKSUM: 41cb9110fa5cb464348e5e2724aa37b811dcec2b
+PODFILE CHECKSUM: 89871751ee4a80a465b945d84a473f3a735e7819
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.11.3

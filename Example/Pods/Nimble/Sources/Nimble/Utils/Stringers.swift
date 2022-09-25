@@ -1,13 +1,7 @@
 import Foundation
 
-
 internal func identityAsString(_ value: Any?) -> String {
-    let anyObject: AnyObject?
-#if os(Linux)
-    anyObject = value as? AnyObject
-#else
-    anyObject = value as AnyObject?
-#endif
+    let anyObject = value as AnyObject?
     if let value = anyObject {
         return NSString(format: "<%p>", unsafeBitCast(value, to: Int.self)).description
     } else {
@@ -46,32 +40,24 @@ extension Float: TestOutputStringConvertible {
 }
 
 extension NSNumber: TestOutputStringConvertible {
-    // This is using `NSString(format:)` instead of
-    // `String(format:)` because the latter somehow breaks
-    // the travis CI build on linux.
     public var testDescription: String {
         let description = self.description
-        
-        if description.contains(".") {
-            // Travis linux swiftpm build doesn't like casting String to NSString,
-            // which is why this annoying nested initializer thing is here.
-            // Maybe this will change in a future snapshot.
-            let decimalPlaces = NSString(string: NSString(string: description)
-                .components(separatedBy: ".")[1])
 
-            // SeeAlso: https://bugs.swift.org/browse/SR-1464
-            switch decimalPlaces.length {
+        if description.contains(".") {
+            let decimalPlaces = description.split(separator: ".")[1]
+            switch decimalPlaces.count {
             case 1:
-                return NSString(format: "%0.1f", self.doubleValue).description
+                return String(format: "%0.1f", doubleValue)
             case 2:
-                return NSString(format: "%0.2f", self.doubleValue).description
+                return String(format: "%0.2f", doubleValue)
             case 3:
-                return NSString(format: "%0.3f", self.doubleValue).description
+                return String(format: "%0.3f", doubleValue)
             default:
-                return NSString(format: "%0.4f", self.doubleValue).description
+                return String(format: "%0.4f", doubleValue)
             }
         }
-        return self.description
+
+        return description
     }
 }
 
@@ -86,15 +72,15 @@ extension AnySequence: TestOutputStringConvertible {
     public var testDescription: String {
         let generator = self.makeIterator()
         var strings = [String]()
-        var value: AnySequence.Iterator.Element?
-        
+        var value: AnySequence.Element?
+
         repeat {
             value = generator.next()
             if let value = value {
                 strings.append(stringify(value))
             }
         } while value != nil
-        
+
         let list = strings.joined(separator: ", ")
         return "[\(list)]"
     }
@@ -122,12 +108,7 @@ extension String: TestOutputStringConvertible {
 
 extension Data: TestOutputStringConvertible {
     public var testDescription: String {
-        #if os(Linux)
-            // FIXME: Swift on Linux triggers a segfault when calling NSData's hash() (last checked on 03-11-16)
-            return "Data<length=\(count)>"
-        #else
-            return "Data<hash=\((self as NSData).hash),length=\(count)>"
-        #endif
+        return "Data<hash=\((self as NSData).hash),length=\(count)>"
     }
 }
 
@@ -145,27 +126,21 @@ extension Data: TestOutputStringConvertible {
 ///     will return the result of constructing a string from the value.
 ///
 /// - SeeAlso: `TestOutputStringConvertible`
-public func stringify<T>(_ value: T) -> String {
+public func stringify<T>(_ value: T?) -> String {
+    guard let value = value else { return "nil" }
+
     if let value = value as? TestOutputStringConvertible {
         return value.testDescription
     }
-    
+
     if let value = value as? CustomDebugStringConvertible {
         return value.debugDescription
     }
-    
+
     return String(describing: value)
 }
 
-/// -SeeAlso: `stringify<T>(value: T)`
-public func stringify<T>(_ value: T?) -> String {
-    if let unboxed = value {
-        return stringify(unboxed)
-    }
-    return "nil"
-}
-
-#if _runtime(_ObjC)
+#if canImport(Darwin)
 @objc public class NMBStringer: NSObject {
     @objc public class func stringify(_ obj: Any?) -> String {
         return Nimble.stringify(obj)
