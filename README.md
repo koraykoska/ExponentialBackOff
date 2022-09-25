@@ -141,9 +141,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.9+
-- Xcode 7.2+
-- [AsyncSwift](https://github.com/duemunk/Async) 1.7+ (Cocoapods will install all dependencies automatically)
+- iOS 12.0+ / Mac OS X 10.15+
+- Xcode 13.4+
+- [AsyncSwift](https://github.com/duemunk/Async) 2.1.0+ (Cocoapods will install all dependencies automatically)
+
+## Note:
+-  Since AsyncSwift is not updated to 2.1.0 in cocoapods trunk. Need to manually point to AsyncSwift to source GitHub URL
 
 ## Author
 
