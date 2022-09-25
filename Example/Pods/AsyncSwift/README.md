@@ -1,5 +1,5 @@
 # Async
-[![](http://img.shields.io/badge/OS%20X-10.10%2B-blue.svg)]() [![](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]() [![](http://img.shields.io/badge/tvOS-9.0%2B-blue.svg)]() [![](http://img.shields.io/badge/watchOS-2.0%2B-blue.svg)]() [![](http://img.shields.io/badge/Swift-3.0-blue.svg)]() [![](https://travis-ci.org/duemunk/Async.svg)](https://travis-ci.org/duemunk/Async) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://github.com/CocoaPods/CocoaPods) [![](http://img.shields.io/badge/operator_overload-nope-green.svg)](https://gist.github.com/duemunk/61e45932dbb1a2ca0954)
+[![](http://img.shields.io/badge/OS%20X-10.10%2B-blue.svg)]() [![](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]() [![](http://img.shields.io/badge/tvOS-9.0%2B-blue.svg)]() [![](http://img.shields.io/badge/watchOS-2.0%2B-blue.svg)]() [![](http://img.shields.io/badge/Swift-5.1-blue.svg)]() [![](https://travis-ci.org/duemunk/Async.svg)](https://travis-ci.org/duemunk/Async) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://github.com/CocoaPods/CocoaPods) [![](http://img.shields.io/badge/operator_overload-nope-green.svg)](https://gist.github.com/duemunk/61e45932dbb1a2ca0954)
 
 
 
@@ -8,9 +8,9 @@ Now more than syntactic sugar for asynchronous dispatches in Grand Central Dispa
 **Async** sugar looks like this:
 ```swift
 Async.userInitiated {
-	return 10
+	10
 }.background {
-	return "Score: \($0)"
+	"Score: \($0)"
 }.main {
 	label.text = $0
 }
@@ -43,6 +43,15 @@ print("Both asynchronous blocks are complete")
 ```
 
 ### Install
+#### Swift Package Manager
+##### Add To Your Project In Xcode 11:
+File > Swift Packages > Add Package Dependency
+##### Add As A Dependency In Package.swift:
+```swift
+dependencies: [
+    .package(url: "https://github.com/duemunk/Async", from: "2.1.0"),
+],
+```
 #### CocoaPods
 ```ruby
 use_frameworks!
