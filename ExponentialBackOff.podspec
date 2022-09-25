@@ -33,9 +33,9 @@ You also have the option to implement your own algorithm without worrying about 
 
   # s.ios.platform     = :ios, '8.0'
   # s.osx.platform     = :osx, '10.10'
-  s.osx.deployment_target = "10.10"
-  s.ios.deployment_target = "8.0"
-  s.tvos.deployment_target = "9.0"
+  s.osx.deployment_target = "10.15"
+  s.ios.deployment_target = "12.0"
+  s.tvos.deployment_target = "12.0"
   # s.watchos.deployment_target = "2.0"
   s.requires_arc = true
 
@@ -47,5 +47,5 @@ You also have the option to implement your own algorithm without worrying about 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'AsyncSwift', '~> 2.0'
+  s.dependency 'AsyncSwift', :git => 'https://github.com/duemunk/Async.git'
 end
