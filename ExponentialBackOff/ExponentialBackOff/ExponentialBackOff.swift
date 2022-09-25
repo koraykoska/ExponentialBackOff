@@ -11,7 +11,7 @@ import Async
 
 public class ExponentialBackOff {
 
-	open static let sharedInstance = ExponentialBackOff()
+    public static let sharedInstance = ExponentialBackOff()
 
 	fileprivate init() {
 	}

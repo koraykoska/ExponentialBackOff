@@ -16,27 +16,27 @@ open class ExponentialBackOffInstance: BackOffAlgorithm {
 	/**
 	 The initial interval value in milliseconds.
 	 */
-	open let initialIntervalMillis: Int
+    public let initialIntervalMillis: Int
 
 	/**
 	 The maximum elapsed time after which the BackOff stops executing in milliseconds.
 	 */
-	open let maxElapsedTimeMillis: Int
+    public let maxElapsedTimeMillis: Int
 
 	/**
 	 The maximum back off time in milliseconds.
 	 */
-	open let maxIntervalMillis: Int
+    public let maxIntervalMillis: Int
 
 	/**
 	 The multiplier value.
 	 */
-	open let multiplier: Double
+    public let multiplier: Double
 
 	/**
 	 The randomization factor.
 	 */
-	open let randomizationFactor: Double
+    public let randomizationFactor: Double
 
 	/**
 	 The number of attempts to run the BackOffAlgorithm successfully
